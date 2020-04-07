@@ -1,7 +1,7 @@
 <mvc:View controllerName="PlantGrowth.CoreLabs.controller.labs" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Shell id="shell">
-		<App id="app">
+		<App id="app123">
 			<!--<pages>-->
 			<!--	<Page id="page" title="Request Form" class="sapUiSizeCompact">-->
 			<!--		<content>-->
