@@ -1,0 +1,542 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tree="sap.ui.table">
+	<Panel height="auto" width="auto" headerText="Laboratory Use Request Form" backgroundDesign="Solid"
+		class="sapUiResponsiveMargin sapUiResponsiveContentPadding">
+		<content>
+			<IconTabBar id="idIconTabBarSea" class="sapUiResponsiveContentPadding" select="onSelectIcontabBarSea">
+				<items>
+					<IconTabFilter id="idProjectSpecification" iconColor="Positive" design="Horizontal" icon="Images/1.png" key="idProjectSpecification">
+						<content>
+							<html:div class="main-wrap">
+								<html:div class="container-wrapper">
+									<html:div class="row font-s14 margin-t10">
+										<html:div class="cols-10">Laboratory Use Request Form</html:div>
+										<html:div class="cols-2">Date:04/09/2019</html:div>
+									</html:div>
+									<html:div class="row font-s13">
+										<html:div class="cols-12 fieldwork-request-container">
+											<html:div class="table-container">
+												<html:div class="row border-btm">
+													<html:div class="cols-12">Project Specification</html:div>
+												</html:div>
+												<html:div class="row border-btm margin-t10">
+													<html:div class="cols-2 min-width-180">Laboratory Requested
+														<html:span class="mandatory-sign">*</html:span>
+													</html:div>
+													<html:div class="cols-2 min-width-180 inputs-group">
+														<html:span class="input-item"><CheckBox id="idWetLab" text="Wet Lab" selected="{data>/laboratoryUseRequestForm/wetLab}"/></html:span>
+													</html:div>
+													<html:div class="cols-2 min-width-180 inputs-group">
+														<html:span class="input-item">
+															<CheckBox id="idDryLab" text="Dry Lab" selected="{data>/laboratoryUseRequestForm/dryLab}"/></html:span>
+													</html:div>
+													<html:div class="cols-12 margin-b10">
+														IACUCCertificate(requiredforworkingwithliveanimalsinWelLab)
+														<Link text=" Download COC"/>
+													</html:div>
+												</html:div>
+												<html:div class="row border-btm">
+													<html:div class="cols-12">Chemicals to be used(add more rows if needed)</html:div>
+													<html:div class="cols-12 no-padding-btm">
+														<html:div class="row inner-table-container">
+															<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+																class="sapUiResponsiveMargin" id="idSeaLabTable_Chemicals" items="{/chemicals}">
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Chemicals (No abbreviations)" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="So id/Liquid" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Concentration" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Amount (Approx)" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Names of Participants/s" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Amount of waste" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem>
+																		<cells>
+																			<ComboBox value="{Chemicals}" placeholder="Category"/>
+																			<ComboBox value="{Liquid}" placeholder="Description"/>
+																			<DatePicker value="{Concentration}" placeholder="StartDate"/>
+																			<DatePicker value="{Amount}" placeholder="EndDate"/>
+																			<Input value="{Participants}" placeholder="Quantity" type="Number"/>
+																			<Input value="{waste}" placeholder="Rate"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</html:div>
+													</html:div>
+													<html:div class="cols-12 no-padding-top">
+														<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button id="chemicalsButtonID" class="addmore" icon="sap-icon://sys-add" text="Add More" press="onPressAddSeaLabTable_Chemicals"></Button>
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<html:div class="row border-btm">
+													<html:div class="cols-12">Compresses Gas to be used (add more rows if needed)</html:div>
+													<html:div class="cols-12 no-padding-btm">
+														<html:div class="row inner-table-container">
+															<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+																class="sapUiResponsiveMargin" id="idSeaLabTable_Compresses" items="{/CompressGas}">
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Gas and concentration" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Classification" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Concentration" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Package type" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Cylinder / container size" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Names of Participant/s" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Amount of waste" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem>
+																		<cells>
+																			<ComboBox value="{Gas}" placeholder="Category"/>
+																			<ComboBox value="{Classification}" placeholder="Description"/>
+																			<DatePicker value="{Concentration}" placeholder="StartDate"/>
+																			<DatePicker value="{PackageType}" placeholder="EndDate"/>
+																			<Input value="{Cylinder}" placeholder="Quantity"/>
+																			<Input value="{Participant}" placeholder="Participants" type="Number"/>
+																			<Input value="{WasteOfAmount}" placeholder="Rate"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</html:div>
+													</html:div>
+													<html:div class="cols-12 no-padding-top">
+														<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button id="idCompressGasButton" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddSeaLabTable_Chemicals"></Button>
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<html:div class="row border-btm">
+													<html:div class="cols-12">Others - detailed information needed (add more rows if needed)</html:div>
+													<html:div class="cols-12 no-padding-btm">
+														<html:div class="row inner-table-container">
+															<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+																class="sapUiResponsiveMargin" id="idSeaLabTable_others" items="{/others}">
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="List of other (biohazard, radioactive, pesticides, animals, etc.)" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Information" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Notes" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Cylinder / container size" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Name(s) of Participant/s handling the item" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Amount of waste" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem>
+																		<cells>
+																			<ComboBox value="{List}" placeholder="Category"/>
+																			<ComboBox value="{Information}" placeholder="Description"/>
+																			<DatePicker value="{Notes}" placeholder="StartDate"/>
+																			<DatePicker value="{Cylinder}" placeholder="EndDate"/>
+																			<Input value="{Name}" placeholder="Quantity" type="Number"/>
+																			<Input value="{WasteOfAmount}" placeholder="Waste of Amount"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</html:div>
+													</html:div>
+													<html:div class="cols-12 no-padding-top">
+														<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button id="idOthersButton" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddSeaLabTable_Chemicals"></Button>
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<!--	<html:div class="action-buttons-container ">
+													<html:button class="btn small secondary margin-r10">Back</html:button>
+													<html:button class="btn small secondary">Next</html:button>
+												</html:div>-->
+											</html:div>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="idEquipmentRequested" iconColor="Positive" design="Horizontal" icon="Images/2.png" key="idEquipmentRequested"
+						enabled="false">
+						<content>
+							<html:div class="main-wrap">
+								<html:div class="container-wrapper">
+									<html:div class="row font-s14 margin-t10">
+										<html:div class="cols-10">Laboratory Use Request Form</html:div>
+										<html:div class="cols-2">Date:04/09/2019</html:div>
+									</html:div>
+									<html:div class="row font-s13">
+										<html:div class="cols-12 fieldwork-request-container">
+											<html:div class="table-container">
+												<html:div class="row border-btm">
+													<html:div class="cols-12">Equipment Requested</html:div>
+													<html:div class="cols-12 no-padding-btm">
+														<html:div class="row inner-table-container small-columns">
+															<html:div class="cols-12 padding-20">
+																<tree:TreeTable id="TreeTableSea" class="catTable" rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
+																	selectionMode="MultiToggle" enableSelectAll="false" ariaLabelledBy="title">
+																	<tree:columns>
+																		<tree:Column width="17rem">
+																			<Label text="Categories"/>
+																			<tree:template>
+																				<Text text="{name}" wrapping="false"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="Start Date"/>
+																			<tree:template>
+																				<DatePicker class="tableData" value="{startDate}" visible="{= !!${startDate}}"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="End Date"/>
+																			<tree:template>
+																				<DatePicker class="tableData" value="{endDate}" visible="{= !!${endDate}}"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="Quantity"/>
+																			<tree:template>
+																				<Input value="{Quantity}" visible="{= !!${Quantity}}"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="Rate"/>
+																			<tree:template>
+																				<Input value="{Rate}" visible="{= !!${Rate}}"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="Unit"/>
+																			<tree:template>
+																				<Input value="{Unit}" visible="{= !!${Unit}}"/>
+																			</tree:template>
+																		</tree:Column>
+																		<tree:Column>
+																			<Label text="Charge"/>
+																			<tree:template>
+																				<Input value="{Charge}" visible="{= !!${Charge}}"/>
+																			</tree:template>
+																		</tree:Column>
+																	</tree:columns>
+																</tree:TreeTable>
+															</html:div>
+															<!--<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"-->
+															<!--	class="sapUiResponsiveMargin" id="idSeaLabTable_EquipmentRequested" items="{/othersDetailed}">-->
+															<!--	<columns>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Category" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="SubCat1" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="SubCat2" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="SubCat3" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Description" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Start" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="End" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Quantity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+															<!--			<header>-->
+															<!--				<Text text="Calculated charges" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+															<!--			</header>-->
+															<!--			<footer/>-->
+															<!--		</Column>-->
+															<!--	</columns>-->
+															<!--	<items>-->
+															<!--		<ColumnListItem>-->
+															<!--			<cells>-->
+															<!--				<ComboBox value="{Category}" placeholder="Category"/>-->
+															<!--				<ComboBox value="{SubCat1}" placeholder="SubCat1"/>-->
+															<!--				<ComboBox value="{SubCat2}" placeholder="SubCat2"/>-->
+															<!--				<ComboBox value="{SubCat3}" placeholder="SubCat3"/>-->
+															<!--				<Input value="{Description}" placeholder="Description"/>-->
+															<!--				<DatePicker value="{Start}" placeholder="StartDate"/>-->
+															<!--				<DatePicker value="{End}" placeholder="EndDate"/>-->
+															<!--				<Input value="{Quantity}" placeholder="Quantity" type="Number"/>-->
+															<!--				<Input value="{Rate}" placeholder="Rate" />-->
+															<!--				<Input value="{Calculated}" placeholder="Calcuated Charge" type="Number"/>-->
+															<!--			</cells>-->
+															<!--		</ColumnListItem>-->
+															<!--	</items>-->
+															<!--</Table>-->
+														</html:div>
+													</html:div>
+													<html:div class="cols-12 no-padding-top">
+														<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button id="idOthersDetailedButton" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddSeaLabTable_Chemicals"></Button>
+																<!--<html:button class="icon-btn icon-add">Add More</html:button>-->
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<html:div class="row border-btm">
+													<html:div class="cols-12">
+														Aquarium setups (add more rows if needed)
+														<html:span class="inline-block alert-message">
+															<html:span class="required-field">*</html:span>
+															Only visible with Aquarium requests (Category Wet lab, SubCat1 Equipment, SubCat2 Aquarium)</html:span>
+													</html:div>
+													<html:div class="cols-12 no-padding-btm">
+														<html:div class="row inner-table-container medium-columns">
+															<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+																class="sapUiResponsiveMargin" id="idSeaLabTable_Aquarium" items="{/Aquarium}">
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Aquarium #" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Size" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Type(open/closed system)" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+																		<header>
+																			<Text text="Set Temperature" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Light requirement" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Water type (raw seawater, filtered, micro filtered)" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Chemicals to be added" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Quantity" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+																		<header>
+																			<Text text="Concentration Charge" width="auto" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem>
+																		<cells>
+																			<ComboBox value="{Aquarium}" placeholder="Category"/>
+																			<ComboBox value="{Size}" placeholder="Description"/>
+																			<Input value="{Type}" placeholder="Type"/>
+																			<Input value="{Temperature}" placeholder="Temparature"/>
+																			<Input value="{Lightrequirement}" placeholder="Light requirement"/>
+																			<Input value="{Watertype}" placeholder="Watertype"/>
+																			<Input value="{Chemicals}" placeholder="Chemicals"/>
+																			<Input value="{Quantity}" placeholder="Quantity" type="Number"/>
+																			<Input value="{Concentration}" placeholder="Concentration"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</html:div>
+													</html:div>
+													<html:div class="cols-12 no-padding-top">
+														<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button id="idAquariumButton" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddSeaLabTable_Chemicals"></Button>
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<!--<html:div class="action-buttons-container ">
+													<html:button class="btn small secondary margin-r10">Back</html:button>
+													<html:button class="btn small secondary">Next</html:button>
+												</html:div>-->
+											</html:div>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="idResearchActivities" iconColor="Positive" design="Horizontal" icon="Images/3.png" key="idResearchActivities"
+						enabled="false">
+						<Button text="Add Procedure" class="addPanel" press="addPanel"></Button>
+								<Panel expandable="false" expanded="true" width="auto" class="sapUiResponsiveMargin" content="{clothing>/results}">
+									<!--<html:div class="main-wrap">-->
+								<content>
+								<Panel expandable="true" id="panel"	headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin" >
+									</Panel>
+								</content>
+								</Panel>
+									<html:div id="addPanel">
+						</html:div>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<html:div class="row font-s14 margin-t10">
+				<html:div class="action-buttons-container ">
+					<Button id="idBackSeaLab" text="Back" press="onPressBackSealabs" visible="false"></Button>
+					<Button id="idContinueSeaLab" text="Continue" press="onPressNextSeaLabs"></Button>
+					<Button id="idSaveSeaLab" text="Save" press="onPressSaveSeaRequestForm" visible="false"></Button>
+				</html:div>
+			</html:div>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

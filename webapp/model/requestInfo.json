@@ -1,0 +1,232 @@
+{
+  "requestNumber": null,
+  "requesterId": "k12345",
+  "modifiedBy": null,
+  "labId": "007",
+  "labDesc": "CMR",
+  "statusId": "1",
+  "statusDesc": "New",
+  "marineOperation": "true",
+  "engineering": "true",
+  "seaLab": "false",
+  "fieldWork": "false",
+  "fieldEquipment": "false",
+  "projectTitle": "Tesla Coil",
+  "projectId": "P007",
+  "projectStartDate": "12/08/2019",
+  "projectEndDate": "30/08/2019",
+  "descriptionOfWork": "Building the Tesla Coil",
+  "groupInformation": [
+    {
+      "name": "Tesla",
+      "groupDept": "Electrical",
+      "groupName": "TeslaIsDaBest"
+    },
+    {
+      "name": "Edison",
+      "groupDept": "Electrical",
+      "groupName": "TeslaIsACheater"
+    }
+  ],
+  "labResearchers": [
+    {
+      "name": "Someone",
+      "kaustId": "k01",
+      "mobileNum": "1234567890"
+    },
+    {
+      "name": "SomeoneElse",
+      "kaustId": "k69",
+      "mobileNum": "1324354657"
+    }
+  ],
+  "researchEmergencyContact1": "me",
+  "researchEmergencyContact2": "alsoMe",
+  "engineerRequestForm": {
+    "consultationType": true,
+    "fabricationAndRepairs": true,
+    "facilitiesUsage": true,
+    "equipmentRequested": [
+      {
+        "category": "",
+        "description": "",
+        "startDate": "12/12/2012",
+        "endDate": "12/12/2012",
+        "quantity": 7,
+        "rate": 10,
+        "unit": "hr",
+        "calculatedCharge": 70
+      },
+      {
+        "category": "",
+        "description": "",
+        "startDate": "12/12/2012",
+        "endDate": "12/12/2012",
+        "quantity": 7,
+        "rate": 10,
+        "unit": "hr",
+        "calculatedCharge": 70
+      }
+    ]
+  },
+  "marineOperationsForm": {
+    "fieldEquipmentRequestForm": {
+      "equipmentsRequested": []
+    },
+    "fieldWorkRequestForm": {
+      "isDiveGearReq": true,
+      "vesselRequested": "test",
+      "targetLocation": "",
+      "inKaustWater": false,
+      "outKaustWater": false,
+      "startDate": "12/12/2012",
+      "startDateAssistance": "",
+      "endDate": "12/12/2012",
+      "endDateAssistance": "",
+      "vesselTotalPrice": "",
+      "vesselDesc": "",
+      "tripLeadName": "",
+      "tripLeadJob": "",
+      "tripLeadMobile": "",
+      "totalPrice": "",
+      "noOfAssistants": "",
+      "assistanceDesc": "",
+      "workDescription": "",
+      "noOfParticipants": "",
+      "tripParticipants": [],
+      "diveGearRequestForm": {
+        "diveEquipment": [
+          {
+            "category": "",
+            "subCategory1": " ",
+            "subCategory2": ""
+          }
+        ],
+        "accessories": [
+          {
+            "category": "",
+            "subCategory1": " ",
+            "subCategory2": "",
+            "subCategory3": "",
+            "quantity": ""
+          }
+        ],
+        "leadDiver": " ",
+        "divePickUpTime": "",
+        "diveDropOffTime": "",
+        "oxyKitNum": "",
+        "nautilusLifeLineNum": "",
+        "noiseMakerNum": "",
+        "bauerMarinerNum": "",
+        "nemoUnderwaterDrill": "",
+        "pneumaticDrill": ""
+      }
+    }
+  },
+  "laboratoryUseRequestForm": {
+    "wetLab": true,
+    "dryLab": false,
+    "chemicalsToBeUsed": [
+      {
+        "chemicalUsed": "",
+        "solidLiquidComb": "",
+        "concentration": "",
+        "amount": "",
+        "participantNameChem": "",
+        "amountWasteChem": ""
+      }
+    ],
+    "compressedGas": [
+      {
+        "gasAndConc": "",
+        "classificationGas": "",
+        "packageTypeGas": "",
+        "cylinderSize": "",
+        "participantNameGas": "",
+        "amountWasteGas": ""
+      }
+    ],
+    "others": [
+      {
+        "otherName": "",
+        "otherInfo": "",
+        "otherNotes": "",
+        "participantNameOthers": "",
+        "amountWasteOther": ""
+      }
+    ],
+    "equipmentsRequest": [
+      {
+        "category": "",
+        "subCategory1": "",
+        "subCategory2": "",
+        "subCategory3": "",
+        "description": "",
+        "startDate": "",
+        "endDate": "",
+        "quantity": "",
+        "rate": "",
+        "unit": "",
+        "calculatedCharge": ""
+      }
+    ],
+    "aquariumSetups": [
+      {
+        "aquarium": "",
+        "size": "",
+        "setTemperature": "",
+        "lightRequirement": "",
+        "waterType": "",
+        "chemicalToBeUsed": "",
+        "concentrationAmount": ""
+      }
+    ],
+    "standardOperatingProcedures": [
+      {
+        "procedureName": "test",
+        "procedureSteps": "test",
+        "chemicalFumeHood": "true",
+        "laboratoryCoat": "",
+        "safetyGlasses": "",
+        "fullFaceShield": "",
+        "cryogenicGloves": "",
+        "disposableGloveType": "",
+        "chemicalApron": "",
+        "chemicalSpashGoggles": "",
+        "laserGoggles": "",
+        "heatResistantGloves": "",
+        "chemicalResistantGloves": "",
+        "respirator": "",
+        "chemicalSpillTraining": "",
+        "electricalSafetyTraining": "",
+        "flammableLiquidSafetyTraining": "",
+        "hazardousWasteTraining": "",
+        "hydrofluoricAcid": "",
+        "laboratorySafetyTraining": "",
+        "laserSafetyTraining": "",
+        "radiationSafetyTraining": "",
+        "safetyHoodHumeTraining": "",
+        "safeHandlingOfNitrogen": "",
+        "otherTraining": "",
+        "hazards": "",
+        "emergencyProcedures": "",
+        "wasteDisposal": "",
+        "gloveBox": "",
+        "snorkelDevice": "",
+        "ventilatedGasCabinet": "",
+        "flammableGasMonitor": "",
+        "safetyInterlock": "",
+        "safetyShower": "",
+        "eyewashStation": "",
+        "fireExtinguisher": "",
+        "biologicalSafetyCabinet": "",
+        "laminarFlowHood": "",
+        "benchTopDustEnclosure": "",
+        "radiationShielding": "",
+        "toxicGasMonitor": "",
+        "lowLevelOxyMonitor": "",
+        "otherEnggControls": ""
+      }
+    ]
+  }
+}

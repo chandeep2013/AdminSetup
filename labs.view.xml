@@ -1,0 +1,131 @@
+<mvc:View controllerName="PlantGrowth.CoreLabs.controller.labs" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<!--<pages>-->
+			<!--	<Page id="page" title="Request Form" class="sapUiSizeCompact">-->
+			<!--		<content>-->
+			<!--			<HBox id="idLabList">-->
+			<!--				<Label id="idLabInfo" text="Service Area :" design="Bold"></Label>-->
+			<!--				<CheckBox id="idMarineSelect" text="Marine Operations" select="onSelectMarineLab"/>-->
+			<!--				<CheckBox id="idEngineeringSelect" text="Engineering" select="onSelectEngineeringLab"/>-->
+			<!--				<CheckBox id="idSeaLabSelect" text="Sea Labs" select="onSelectSeaLab"/>-->
+			<!--			</HBox>-->
+			<!--			<HBox id="idlistForMarine" visible="false">-->
+			<!--				<RadioButtonGroup id="idMarineRadioGroup" columns="2" width="100%" select="onSelectMarineLabSelect" class="sapUiMediumMarginBottom">-->
+			<!--					<buttons>-->
+			<!--						<RadioButton text="Field Work Request"/>-->
+			<!--						<RadioButton text="Field Equipment Request"/>-->
+			<!--					</buttons>-->
+			<!--				</RadioButtonGroup>-->
+			<!--			</HBox>-->
+			<!--			<IconTabBar id="idIconTabBarMulti"  class="sapUiResponsiveContentPadding">-->
+			<!--				<items>-->
+			<!--					<IconTabFilter id="idMarineLabInfoLoad" icon="sap-icon://hint" text="Marine Operations">-->
+			<!-- ############ Fragment loading ###########-->
+			<!--					</IconTabFilter>-->
+			<!--					<IconTabFilter id="idEngineeringLabInfoLoad" icon="sap-icon://collaborate" text="Engineering">-->
+			<!-- ############ Fragment loading ###########-->
+			<!--					</IconTabFilter>-->
+			<!--					<IconTabFilter id="idSeaLabLabInfoLoad" icon="sap-icon://lab" text="SeaLabs">-->
+			<!-- ############ Fragment loading ###########-->
+			<!--					</IconTabFilter>-->
+			<!--				</items>-->
+			<!--			</IconTabBar>-->
+			<!--		</content>-->
+			<!--	</Page>-->
+			<!--</pages>-->
+			<pages>
+				<Page title="Request Form">
+					<content>
+						<html:div class="main-wrap">
+							<html:div class="container-wrapper">
+								<html:div class="row font-s14 margin-t10">
+									<html:div class="cols-10">Request Form</html:div>
+									<html:div class="cols-2">Date:</html:div>
+								</html:div>
+								<html:div class="row font-s13 align-items-top">
+									<html:div class="cols-12 align-items-top">
+										<!--<HBox id="idLabList">-->
+										<html:label class="label-text">Service Area
+											<html:span class="mandatory-sign">*</html:span>
+										</html:label>
+										<html:div class="flex-wrap">
+											<!--    	<HBox id="idLabList">-->
+											<!--	<Label id="idLabInfo" text="Service Area :" design="Bold"></Label>-->
+											<!--	<CheckBox id="idMarineSelect" text="Marine Operations" select="onSelectMarineLab"/>-->
+											<!--	<CheckBox id="idEngineeringSelect" text="Engineering" select="onSelectEngineeringLab"/>-->
+											<!--	<CheckBox id="idSeaLabSelect" text="Sea Labs" select="onSelectSeaLab"/>-->
+											<!--</HBox>-->
+											<html:div class="main-items-chk" id="idLabList">
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idMarineSelect" text="Marine Operations" select="onSelectMarineLab"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idEngineeringSelect" text="Engineering" select="onSelectEngineeringLab"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idSeaLabSelect" text="Sea Labs" select="onSelectSeaLab"/></html:span>
+											</html:div>
+											<!--</HBox>-->
+											<!--<html:div class="sub-items-check" id="idlistForMarine" visible="false">-->
+											<HBox id="idlistForMarine" visible="false">
+												<!--<RadioButtonGroup id="idMarineRadioGroup" columns="2" width="100%" select="onSelectMarineLabSelect" class="sapUiMediumMarginBottom">-->
+												<!--	<buttons>-->
+												<!--		<RadioButton text="Field Work Request"/>-->
+												<!--		<RadioButton text="Field Equipment Request"/>-->
+												<!--	</buttons>-->
+												<!--</RadioButtonGroup>-->
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idFieldWorkSelect" text="Field Work Request" select="onSelectMarineLabSelect"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idFieldEquipmentSelect" text="Field Equipment Request" select="onSelectMarineLabSelect"/></html:span>
+											</HBox>
+											<!--</html:div>-->
+										</html:div>
+									</html:div>
+								</html:div>
+								<html:div class="row font-s13 justify-content-center">
+									<html:div class="cols-12 font-s14 margin-t10">
+										Project Information
+									</html:div>
+									<html:div class="cols-11 no-padding">
+										<html:div class="row project-info-container">
+											<IconTabBar id="idIconTabBarMulti" class="sapUiResponsiveContentPadding" select="onSelectIcontabBar">
+												<items>
+													<IconTabFilter id="idMarineLabInfoLoad" icon="sap-icon://hint" key="marine" text="Marine Operations" enabled="false">
+														<!-- ############ Fragment loading for Marine Lab###########-->
+														<content>
+															<Text id="idDefaultText" text="Please select lab"></Text>
+															<IconTabBar id="idmarineFieldRequestLab" class="sapUiResponsiveContentPadding" visible="false">
+																<items>
+																	<IconTabFilter id="idMarine_FieldRequest" text="Field work Request Form" enabled="false">
+																		<content>
+																			<Text id="idDefaultText1" text="Please select lab"></Text>
+																		</content>
+																	</IconTabFilter>
+																	<IconTabFilter id="idMarine_FieldEquipement" text="Field Equipment Request Form" enabled="false"/>
+																</items>
+															</IconTabBar>
+														</content>
+													</IconTabFilter>
+													<IconTabFilter id="idEngineeringLabInfoLoad" icon="sap-icon://collaborate" key="Engineering" text="Engineering" enabled="false">
+														<!-- ############ Fragment loading ###########-->
+													</IconTabFilter>
+													<IconTabFilter id="idSeaLabLabInfoLoad" icon="sap-icon://lab" text="SeaLabs" key="sea" enabled="false">
+														<!-- ############ Fragment loading ###########-->
+													</IconTabFilter>
+												</items>
+											</IconTabBar>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+						</html:div>
+					</content>
+					<footer >
+						<Toolbar >
+							<ToolbarSpacer/>
+							<Button id="idPrev" text="Prev" type="Emphasized" visible="false" press="onPressPrev"/>
+							<Button id="idNext" text="Next" type="Emphasized" visible="false" press="onPressNext"/>
+							<Button id="idSubmit" text="Submit" type="Accept" visible="false" press="onPressSubmit"/>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,92 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified" xmlns:m="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:u="sap.ui.unified" xmlns:tree="sap.ui.table">
+	<Panel height="auto" width="auto" backgroundDesign="Solid" class="sapUiResponsiveMargin sapUiResponsiveContentPadding" >
+		<content>
+			<html:div class="main-wrap">
+				<html:div class="container-wrapper">
+					<html:div class="row font-s14 margin-t10">
+						<html:div class="cols-10">Field Equipment Request Form</html:div>
+						<html:div class="cols-2">Date:04/09/2019
+							<Label id="idTodaysDateLabel3"/></html:div>
+					</html:div>
+					<html:div class="row font-s13">
+						<html:div class="cols-12 font-s13">Equipments Requested</html:div>
+						<html:div class="cols-12 font-s13 equipment-request-table-container">
+							<html:div class="table-container">
+								<html:div class= "cols-12 padding-20">
+								<tree:TreeTable id="TreeTableEng" class="catTable" rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}" selectionMode="MultiToggle"
+									enableSelectAll="false" ariaLabelledBy="title">
+									<tree:columns>
+										<tree:Column width="17rem">
+											<Label text="Categories"/>
+											<tree:template>
+												<Text text="{name}" wrapping="false"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Start Date"/>
+											<tree:template>
+												<DatePicker class="tableData" value="{startDate}" visible="{= !!${startDate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="End Date"/>
+											<tree:template>
+												<DatePicker class="tableData" value="{endDate}" visible="{= !!${endDate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Quantity"/>
+											<tree:template>
+												<Input value="{Quantity}" visible="{= !!${Quantity}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Rate"/>
+											<tree:template>
+												<Input value="{Rate}" visible="{= !!${Rate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Unit"/>
+											<tree:template>
+												<Input value="{Unit}" visible="{= !!${Unit}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Charge"/>
+											<tree:template>
+												<Input value="{Charge}" visible="{= !!${Charge}}"/>
+											</tree:template>
+										</tree:Column>
+									</tree:columns>
+								</tree:TreeTable>
+								</html:div>
+								<!--<html:div class="row col-small-padding border-btm margin-b10">-->
+								<!--	<html:div class="cols-12 align-items-center">-->
+										<!--<html:a href="#" class="margin-r10">Add Resource</html:a> -->
+								<!--		<Button class="addmore" icon="sap-icon://sys-add" text="Add Resource" press="onPressAddFieldsEquipments"></Button>-->
+								<!--	</html:div>-->
+								<!--</html:div>-->
+								<html:div class="row col-small-padding">
+									<html:div class="cols-12 flex-wrap">
+										<html:label class="label-text">Attachment:</html:label>
+										<html:ul class="attachments-container">
+											<html:li>
+												<u:FileUploader id="fileUploaderequip" uploadProgress="onUploadProgress" uploadStart="onUploadStart"
+													uploadComplete="onFileUploaderUploadComplete" buttonOnly="true" buttonText="Upload" uploadOnChange="true" sendXHR="true"/>
+											</html:li>
+										</html:ul>
+									</html:div>
+								</html:div>
+								<html:div class="action-buttons-container ">
+									<Button text="Save" press="onPressSaveFieldEquipmentRequestForm"></Button>
+								</html:div>
+							</html:div>
+						</html:div>
+					</html:div>
+				</html:div>
+			</html:div>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

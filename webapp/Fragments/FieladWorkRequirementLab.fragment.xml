@@ -1,0 +1,522 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel height="auto" width="auto" headerText="" backgroundDesign="Solid" class="sapUiResponsiveMargin sapUiResponsiveContentPadding">
+		<content>
+			<IconTabBar class="sapUiResponsiveContentPadding" select="onSelectIconTabrFieldWorkRequestForm" id="idFieldWorkRequestForm">
+				<items>
+					<!--######### Trip Specifics Panel##########-->
+					<IconTabFilter id="idTripSpecs"  icon="Images/1.png" iconColor="Positive" design="Horizontal" key="TripSpecs">
+						<content>
+							<!--<VBox class="sapUiSmallMargin">-->
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+								singleContainerFullSize="true">
+								<f:content>
+									<html:div class="container-wrapper">
+										<html:div class="row font-s13">
+											<html:div class="cols-12 font-s13 fieldwork-request-container">
+												<html:div class="table-container">
+													<html:div class="row border-btm">
+														<html:div class="cols-12 font-s13">Trip Specifics</html:div>
+													</html:div>
+													<html:div class="row border-btm">
+														<html:div class="cols-6 border-right">
+															<html:div class="label-col">Vessel Requested
+																<html:span class="required-field">*</html:span>
+															</html:div>
+															<html:div class="description-detail no-padding-t">
+																<ComboBox id="idVessel" placeholder="Select Value" value="{data>/marineOperationsForm/fieldWorkRequestForm/vesselRequested}"/>
+																<TextArea class="text-area padding-10" maxLength="1000" placeholder="Enter Remarks" value="{data>/marineOperationsForm/fieldWorkRequestForm/vesselDesc}"/>
+															</html:div>
+														</html:div>
+														<html:div class="cols-6 flex-wrap col-small-padding">
+															<html:div class="row flex-wrap margin-b10 padding-b10">
+																<html:div class="row padding-b10">Target Location
+																	<html:span class="required-field">*</html:span>
+																</html:div>
+																<RadioButtonGroup id="idKaustWater" columns="2" width="100%" class="sapUiMediumMarginBottom">
+																	<buttons>
+																		<RadioButton text="In KAUST Water (Less than 50 Km from KAUST)" selected="{data>/marineOperationsForm/fieldWorkRequestForm/inKaustWater}"/>
+																		<RadioButton text="Outside KAUST Water (More than 50 Km from KAUST)" selected="{data>/marineOperationsForm/fieldWorkRequestForm/outKaustWater}"/>
+																	</buttons>
+																</RadioButtonGroup>
+															</html:div>
+															<html:div class="row padding-b10 margin-b10 align-items-center">
+																Start Date
+																<html:span class="required-field">*</html:span>
+																<html:div class="date-picker small">
+																	<!--<html:input class="input-text datepicker" id="idStartDate" type="text" placeholder=""/>-->
+																	<DatePicker id="idStartDate"  placeholder="Start Date" value="{data>/marineOperationsForm/fieldWorkRequestForm/startDate}"></DatePicker>
+																	<!--<html:span class="calendar-icon"></html:span>-->
+																</html:div>
+																End Date
+																<html:span class="required-field">*</html:span>
+																<html:div class="date-picker small">
+																<!--	<html:input class="input-text datepicker" id="idEndDate" type="text" placeholder=""/>-->
+																	<DatePicker id="idEndDate"  placeholder="End Date" value="{data>/marineOperationsForm/fieldWorkRequestForm/endDate}"></DatePicker>
+																	<!--<html:span class="calendar-icon"></html:span>-->
+																</html:div>
+															</html:div>
+															<html:div class="row align-items-center padding-b10">
+																<html:div class="label-col">Vessel Total Price
+																	<html:span class="required-field">*</html:span>
+																</html:div>
+																<html:div class="description-detail"><Input id="idVesselTotalPrice" type="Number" class="input-text small" placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/vesselTotalPrice}"/></html:div>
+															</html:div>
+														</html:div>
+													</html:div>
+													<html:div class="row align-items-center border-btm">
+														<html:div class="cols-6 flex-wrap">
+															<html:label class="label-text">FRP</html:label>
+															<html:a href="#">Download</html:a>
+														</html:div>
+														<html:div class="cols-6 flex-wrap">
+															<html:label class="label-text">Attachment:</html:label>
+															<html:ul class="attachments-container">
+																<u:FileUploader id="fileUploader" uploadProgress="onUploadProgress" uploadStart="onUploadStart"
+																	uploadComplete="onFileUploaderUploadComplete" buttonOnly="true" buttonText="Upload" uploadOnChange="true" sendXHR="true"/>
+																<!--<html:li>-->
+																<!--<html:input type="file" name="choose file"/>-->
+																<!--</html:li>-->
+															</html:ul>
+														</html:div>
+													</html:div>
+													<html:div class="row margin-b10">
+														<html:div class="cols-12">Trip Leader</html:div>
+														<html:div class="cols-12">
+															<html:div class="col no-padding new-mar">
+																<html:span class="label-samll text-right">Name
+																</html:span>
+																<Input placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/tripLeadName}"/></html:div>
+															<html:div class="col no-padding new-mar">
+																<html:span class="label-samll text-right">Job Title
+																</html:span>
+																<Input placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/tripLeadJob}"/></html:div>
+															<html:div class="col no-padding new-mar">
+																<html:span class="label-samll text-right">Mobile No
+																</html:span>
+																<Input placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/tripLeadMobile}"/></html:div>
+														</html:div>
+													</html:div>
+													<!--	<html:div class="action-buttons-container ">
+														<html:button class="btn small secondary margin-r10">Back</html:button>
+														<html:button class="btn small secondary">Next</html:button>
+													</html:div>-->
+												</html:div>
+											</html:div>
+										</html:div>
+									</html:div>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</IconTabFilter>
+					<!--########### CMR Assistance Required ############-->
+					<IconTabFilter id="idCMRAssitance" icon="Images/2.png" iconColor="Positive" design="Horizontal" key="AssistReq" enabled="false">
+						<content>
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+								singleContainerFullSize="true">
+								<f:content>
+									<!--<core:Title text=""/>-->
+									<!--<Label text="No of Assistance"/>-->
+									<!--<Input placeholder="Select Value"/>-->
+									<!--<Label text="Start Date" required="true"/>-->
+									<!--<DatePicker placeholder="Start Date"/>-->
+									<!--<Label text="End Date" required="true"/>-->
+									<!--<DatePicker placeholder="End Date"/>-->
+									<!--<core:Title text=""/>-->
+									<!--<Label text="Total Price" required="true"/>-->
+									<!--<Input placeholder="Total Price"/>-->
+									<!--<Label text="Description of assistance"/>-->
+									<!--<TextArea placeholder="Description"></TextArea>-->
+									<html:div class="container-wrapper">
+										<html:div class="row font-s13">
+											<html:div class="cols-12 font-s13 fieldwork-request-container">
+												<html:div class="table-container">
+													<html:div class="row border-btm">
+														<html:div class="cols-12 font-s13">CMR Assistance Required</html:div>
+													</html:div>
+													<html:div class="row border-btm margin-t10">
+														<html:div class="cols-6 border-right flex-wrap">
+															<html:div class="row padding-b10">
+																<html:div class="label-col">No of Assistance</html:div>
+																<html:div class="description-detail no-padding-t">
+																	<Input class="input-text small" placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/noOfAssistants}"/>
+																</html:div>
+															</html:div>
+															<html:div class="row padding-b10 margin-b10 align-items-center">
+																Start Date
+																<html:span class="required-field">*</html:span>
+																<html:div class="date-picker small">
+																	<!--<html:input class="input-text datepicker" id="idCMRStartdate" type="text" placeholder=""/>-->
+																	<DatePicker  id="idCMRStartdate" placeholder="Start Date" value="{data>/marineOperationsForm/fieldWorkRequestForm/startDateAssistance}"></DatePicker>
+																	<!--<html:span class="calendar-icon"></html:span>-->
+																</html:div>
+																End Date
+																<html:span class="required-field">*</html:span>
+																<html:div class="date-picker small">
+																	<!--<html:input class="input-text datepicker" id="idCMREnddate" type="text" placeholder=""/>-->
+																		<DatePicker id="idCMREnddate"  placeholder="End Date" value="{data>/marineOperationsForm/fieldWorkRequestForm/endDateAssistance}"></DatePicker>
+																	<!--<html:span class="calendar-icon"></html:span>-->
+																</html:div>
+															</html:div>
+														</html:div>
+														<html:div class="cols-6 flex-wrap col-small-padding">
+															<html:div class="row padding-b10">
+																<html:div class="label-col">Total Price</html:div>
+																<html:div class="description-detail no-padding-t">
+																	<Input class="input-text small" id="idTotalPriceMarine" type="Number" placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/totalPrice}"/>
+																</html:div>
+															</html:div>
+															<html:div class="row padding-b10">
+																<html:div class="label-col">Description of assistance<html:br/>E.g. (Driver,CTD operator,..)</html:div>
+																<html:div class="description-detail no-padding-t">
+																	<TextArea class="text-area no-margin padding-10" maxLength="1000" placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/assistanceDesc}"/>
+																</html:div>
+															</html:div>
+														</html:div>
+													</html:div>
+													<!--	<html:div class="action-buttons-container ">
+														<html:button class="btn small secondary margin-r10">Back</html:button>
+														<html:button class="btn small secondary">Next</html:button>
+													</html:div>-->
+												</html:div>
+											</html:div>
+										</html:div>
+									</html:div>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</IconTabFilter>
+					<!--######## Trip Participants Information ############-->
+					<IconTabFilter id="idTripParticipantInfo" icon="Images/3.png" iconColor="Positive" design="Horizontal" key="PartInfo" enabled="false">
+						<content>
+							<html:div class="main-wrap">
+								<html:div class="container-wrapper">
+									<html:div class="row font-s13">
+										<html:div class="cols-12 font-s13 fieldwork-request-container">
+											<html:div class="table-container">
+												<html:div class="row border-btm">
+													<html:div class="cols-12 font-s13">Trip Participants Information</html:div>
+												</html:div>
+												<html:div class="row border-btm margin-t10">
+													<html:div class="cols-12 flex-wrap">
+														<html:div class="row padding-b10">
+															<html:div class="label-col">No of Participants</html:div>
+															<html:div class="description-detail no-padding-t">
+																<Input placeholder="" type="Number" value="{data>/marineOperationsForm/fieldWorkRequestForm/noOfParticipants}"/>
+															</html:div>
+														</html:div>
+														<Table id="idParticipantsInfo" items="{/ParticipantsInfoInfo}" mode="MultiSelect">
+															<columns>
+																<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+																	<ObjectIdentifier title="Name"/>
+																</Column>
+																<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+																	<ObjectIdentifier title="Passport No"/>
+																</Column>
+																<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+																	<ObjectIdentifier title="Type"/>
+																</Column>
+																<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"></Column>
+															</columns>
+															<items>
+																<ColumnListItem>
+																	<cells>
+																		<Input width="70%" value="{name}" placeholder="Name"/>
+																		<Input value="{passportNum}" width="70%" type="Number" placeholder="Passport No"/>
+																		<Input value="{contactType}" width="70%" type="Number" placeholder="Number"/>
+																		<HBox>
+																			<Button icon="sap-icon://edit" press="onDeleteChamber"/>
+																			<Button icon="sap-icon://delete" press="onDeleteChamber"/>
+																		</HBox>
+																	</cells>
+																</ColumnListItem>
+															</items>
+														</Table>
+														<!--<html:div class="row inner-table-container">-->
+														<!--  <html:div class="row col-small-padding table-title text-center">-->
+														<!--    <html:div class="col">Name</html:div>-->
+														<!--    <html:div class="col">Passport No</html:div>-->
+														<!--    <html:div class="col">Type</html:div>-->
+														<!--    <html:div class="col"></html:div>-->
+														<!--  </html:div>-->
+														<!--  <html:div class="row col-small-padding table-data">-->
+														<!--    <html:div class="col check-box-col">-->
+														<!--      <html:input type="checkbox" name=""/>-->
+														<!--      <html:input class="input-small" type="text" placeholder=""/>-->
+														<!--    </html:div>-->
+														<!--    <html:div class="col"><html:input class="input-small" type="text" placeholder=""/></html:div>-->
+														<!--    <html:div class="col"><html:input class="input-small" type="text" placeholder=""/></html:div>-->
+														<!--    <html:div class="col">-->
+														<!--      <html:button class="icon-btn icon-edit">Edit</html:button>-->
+														<!--      <html:button class="icon-btn icon-remove">Delete</html:button>-->
+														<!--    </html:div>-->
+														<!--  </html:div>-->
+														<!--</html:div>-->
+														<html:div class="row col-small-padding border-arround margin-b10">
+															<html:div class="cols-12 align-items-center">
+																<Button class="addmore" icon="sap-icon://sys-add" text="Add More" press="onPressTripParticipantsTable"></Button>
+																<!--<html:button class="icon-btn icon-add">Add More</html:button>-->
+															</html:div>
+														</html:div>
+													</html:div>
+												</html:div>
+												<html:div class="row border-btm">
+													<html:div class="cols-6 border-right flex-wrap">
+														<html:div class="row margin-b10">Target Location</html:div>
+														<html:div class="row">
+															<TextArea class="text-area no-margin padding-10" placeholder="" value="{data>/marineOperationsForm/fieldWorkRequestForm/targetLocation}"></TextArea>
+														</html:div>
+													</html:div>
+													<html:div class="cols-6 flex-wrap">
+														<html:div class="row margin-b10">Brief Work Description</html:div>
+														<html:div class="row">
+															<TextArea class="text-area no-margin padding-10" value="{data>/marineOperationsForm/fieldWorkRequestForm/workDescription}" placeholder=""></TextArea>
+														</html:div>
+													</html:div>
+												</html:div>
+												<html:div class="row">
+													<html:div class="cols-12 align-items-top">
+														<html:div class="cols-3">
+															<html:label class="label-text">Dive Gear Required</html:label>
+														</html:div>
+														<html:div class="cols-9 inputs-group">
+															<RadioButtonGroup id="idDiveGear" columns="2" width="100%" select="onDiveGear"  class="sapUiMediumMarginBottom">
+																<buttons>
+																	<RadioButton text="Yes" selected="{data>/marineOperationsForm/fieldWorkRequestForm/isDiveGearReq}" />
+																	<RadioButton text="No" selected="false"/>
+																</buttons>
+															</RadioButtonGroup>
+															<!--<html:span class="input-item"><html:input type="radio" name="option" value="yes"> Yes</html:span>-->
+															<!--<html:span class="input-item"><html:input type="radio" name="option" value="no"> No</html:span>-->
+															<html:span class="inline-block alert-message">
+																<html:span class="required-field">*</html:span>
+																If Yes Fill Drive Gear Form</html:span>
+														</html:div>
+													</html:div>
+												</html:div>
+												<!--<html:div class="action-buttons-container ">
+													<html:button class="btn small secondary margin-r10">Back</html:button>
+													<html:button class="btn small secondary">Next</html:button>
+												</html:div>-->
+											</html:div>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+	<VBox class="sapUiSmallMargin" id="idDiveGearVisibility" visible="false">
+								<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="Dive Request Item" labelSpanXL="3"
+									labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+									columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+									<f:content>
+										<Label text="Lead Diver" required="true"/>
+										<Input id="idLeadDiver" placeholder="Lead Diver"/>
+										<Label text="Dive Dear Pick Up " required="true"/>
+										<DateTimePicker id="DTP1" placeholder="Pick Up" displayFormat="short" change="handleChangeDateTime" />
+										<u:CalendarLegend id="calendar1" legend="legend1"/>
+										<Label text="Dive Gear Drop Off " required="true"/>
+										<DateTimePicker id="DTP2" placeholder="Drop Off " displayFormat="short" change="handleChangeDateTime" />
+									</f:content>
+								</f:SimpleForm>
+								<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+									class="sapUiResponsiveMargin" id="idDiveGeartable" items="{/GearLab}">
+									<headerToolbar>
+										<Toolbar>
+											<Title text="Dive Equipment"></Title>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Name" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat1" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat2" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat3" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<ComboBox value="{Chemicals}" placeholder="Category"/>
+												<ComboBox value="{Liquid}" placeholder="Description"/>
+												<Input value="{Participants}" placeholder="Quantity"/>
+												<Input value="{waste}" placeholder="Rate"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<html:div class="cols-12 no-padding-top">
+									<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+										<html:div class="cols-12 align-items-center">
+											<Button id="idAddGearButton" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddDiveGear"></Button>
+										</html:div>
+									</html:div>
+								</html:div>
+								<!--Mandatory form -->
+								<f:SimpleForm editable="false" layout="ResponsiveGridLayout" title="Equipment and Quantity" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+									labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+									singleContainerFullSize="false">
+									<f:content>
+										<Label text="02 Kit"/>
+										<Input placeholder="Quantity"/>
+										<Label text="Nautilus Lifeline "/>
+										<Input placeholder="Quantity"/>
+										<Label text="Noisemaker "/>
+										<Input placeholder="Quantity"/>
+									</f:content>
+								</f:SimpleForm>
+								<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+									class="sapUiResponsiveMargin" id="idDiveGeartable1" items="{/AccessoriesLab}">
+									<headerToolbar>
+										<Toolbar>
+											<Title text="Accessories/Other Equipment"></Title>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Name" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat1" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat2" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">
+											<header>
+												<Text text="Sub Cat3" width="auto" textAlign="Begin" textDirection="Inherit"/>
+											</header>
+											<footer/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<ComboBox value="{name}" placeholder="Category"/>
+												<ComboBox value="{SubCat1}" placeholder="Description"/>
+												<Input value="{SubCat2}" placeholder="Quantity"/>
+												<Input value="{SubCat3" placeholder="Rate"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<html:div class="cols-12 no-padding-top">
+									<html:div class="row col-small-padding border-arround no-border-top margin-b10">
+										<html:div class="cols-12 align-items-center">
+											<Button id="idGearAccessories" text="Add More" class="addmore" icon="sap-icon://sys-add" press="onPressAddDiveGear"></Button>
+										</html:div>
+									</html:div>
+								</html:div>
+								<!--Filling and Specialist tools form -->
+								<f:SimpleForm editable="false" layout="ResponsiveGridLayout" title="Filling and Specialist tools" labelSpanXL="3" labelSpanL="3"
+									labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+									columnsL="1" columnsM="1" singleContainerFullSize="false">
+									<f:content>
+										<Label text="Bauer mariner 300BAr portable air compressor"/>
+										<Input placeholder=""/>
+										<Label text="Nemo underwater drill (not for coring) "/>
+										<Input placeholder=""/>
+										<Label text="Pneumatic drill (with adjusted regulator) "/>
+										<Input placeholder=""/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<!--	<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin" headerText="Trip Specifics" backgroundDesign="Solid">
+			
+			</Panel>
+		
+			<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin" headerText="CMR Assistance Required"
+				backgroundDesign="Solid">
+			
+			</Panel>
+		
+			<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin" headerText="Trip Participants Information"
+				backgroundDesign="Solid">
+			
+			</Panel>-->
+			<!--<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin" headerText="Trip Participants Information"-->
+			<!--	backgroundDesign="Solid">-->
+			<!--	<content>-->
+			<!--		<VBox class="sapUiSmallMargin">-->
+			<!--			<HBox>-->
+			<!--				<Label text="No of Participants :" design="Bold"></Label>-->
+			<!--				<Input placeholder="No of participants"/>-->
+			<!--			</HBox>-->
+			<!--			<VBox>-->
+			<!--				<Table id="idParticipantsInfo" items="{/Chambers}" mode="MultiSelect">-->
+			<!--					<columns>-->
+			<!--						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">-->
+			<!--							<ObjectIdentifier title="Name"/>-->
+			<!--						</Column>-->
+			<!--						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">-->
+			<!--							<ObjectIdentifier title="Passport No"/>-->
+			<!--						</Column>-->
+			<!--						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">-->
+			<!--							<ObjectIdentifier title="Type"/>-->
+			<!--						</Column>-->
+			<!--						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" width="5%"></Column>-->
+			<!--					</columns>-->
+			<!--					<items>-->
+			<!--						<ColumnListItem>-->
+			<!--							<cells>-->
+			<!--								<ComboBox width="70%" placeholder="Select RoomType">-->
+			<!--									<core:Item key="1" text="Bio Chamber"/>-->
+			<!--									<core:Item key="2" text="Conviron"/>-->
+			<!--									<core:Item key="3" text="Percival"/>-->
+			<!--									<core:Item key="4" text="Walk_in_Conviron"/>-->
+			<!--								</ComboBox>-->
+			<!--								<Input placeholder="No of Chambers" width="70%" type="Number"/>-->
+			<!--								<Input placeholder="No of Shelves" width="70%" type="Number"/>-->
+			<!--								<HBox>-->
+			<!--									<Button icon="sap-icon://edit" press="onDeleteChamber"/>-->
+			<!--									<Button icon="sap-icon://delete" press="onDeleteChamber"/>-->
+			<!--								</HBox>-->
+			<!--							</cells>-->
+			<!--						</ColumnListItem>-->
+			<!--					</items>-->
+			<!--				</Table>-->
+			<!--			</VBox>-->
+			<!--			</VBox>-->
+			<!--		</content>-->
+			<!--	</Panel>-->
+			<html:div class="row font-s14 margin-t10">
+				<html:div class="action-buttons-container ">
+					<Button id="idBackFieldReqForm" text="Back" press="onPressBackFieldWorkRequestForm" visible="false"></Button>
+					<Button id="idContinue" text="Continue" press="onPressNextFieldWorkRequestForm"></Button>
+					<Button id="idSaveFieldReqForm" text="Save" press="onPressSaveFieldWorkRequestForm" visible="false"></Button>
+				</html:div>
+			</html:div>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

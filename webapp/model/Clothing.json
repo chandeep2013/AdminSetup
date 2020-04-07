@@ -1,0 +1,88 @@
+{
+	"results":[""],
+	"name":"aayush",
+	"abc":true,
+  "catalog": {
+    "clothing": {
+      "categories": [
+            {"name": "Seawater Sampling", "categories": [
+              {"name": "24P x 10L Rosette Niskin - Idronaut  ", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "6P x  5L Rosette Niskin - Idronaut.", "startDate": "21/10/2012", "endDate": "22/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 10L  Rosette-Niskin - SBE", "startDate": "14/10/2012", "endDate": "14/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 5L Rosette-Niskin - SBE", "startDate": "27/10/2012", "endDate": "23/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 2.5L Rosette-Niskin - SBE", "startDate": "19/10/2012", "endDate": "13/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "In-line Niskin sampling (2.5L, SL, 10L, 20L)", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+            ]},
+            {"name": "Sediment Sampling", "categories": [
+              {"name": "Gravity Corer",  "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Multicorer", "startDate": "27/10/2012", "endDate": "23/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Van Veen Grab", "startDate": "19/10/2012", "endDate": "13/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Compact Box Corer", "startDate": "14/10/2012", "endDate": "14/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+            
+        ]},
+        {"name": "Instruments and Sensors", "categories": [
+        	{"name": "CTD", "categories":[
+              {"name": "CTD Idronaut 305Plus - 200m",  "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]},
+              {"name": "CED", "categories":[
+              {"name": "ABS Idronaut 305Plus - 200m",  "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]},
+              {"name": "CURRENT", "categories":[
+              {"name": "ADCP RDI 600KHz Plastic", "categories":[ 
+              	{"name":"6P x  5L Rosette Niskin - Idronaut.", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]}
+              ]},
+               {"name": "FLUOROMETER", "categories":[
+              {"name": "Fluorometer Walz Diving PAM Handheld", "categories":[ 
+              	{"name": "CURRENT - AquaDopp - Single Point - 3000m", "categories":[ 
+              		{"name": "LOGGER", "categories":[ 
+              			{"name": "CTD YSI 6000 Multi Sonde", "categories":[ 
+              	{"name":"Temperature Hobo Logger", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]}
+              ]}
+              ]},
+              {"name": "Light LiCor Underwater w/Handheld Logging Display", "categories":[ 
+              		{"name": "LOGGER", "categories":[ 
+              			{"name": "CTD YSI 6000 Multi Sonde", "categories":[ 
+              	{"name":"Temperature Hobo Logger", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]}
+              ]}
+              ]}
+              ]},
+              {"name": "Gravity Corer", "categories":[ 
+              	{"name": "Multicorer", "categories":[ 
+              		{"name": "LOGGER", "categories":[ 
+              			{"name": "CTD YSI 6000 Multi Sonde", "categories":[ 
+              	{"name":"Temperature Hobo Logger", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]}
+              ]}
+              ]},
+              {"name": "Compact Box Corer", "categories":[ 
+              		{"name": "Van Veen Grab", "categories":[ 
+              			{"name": "Light LiCor Underwater w/Handheld Logging Display", "categories":[ 
+              	{"name":"Temperature Hobo Logger", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+              ]}
+              ]}
+              ]}
+              ]}
+              ]}
+        ]},
+         {"name": "Seawater Sampling", "categories": [
+              {"name": "24P x 10L Rosette Niskin - Idronaut  ", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "6P x  5L Rosette Niskin - Idronaut.", "startDate": "21/10/2012", "endDate": "22/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 10L  Rosette-Niskin - SBE", "startDate": "14/10/2012", "endDate": "14/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 5L Rosette-Niskin - SBE", "startDate": "27/10/2012", "endDate": "23/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "12P x 2.5L Rosette-Niskin - SBE", "startDate": "19/10/2012", "endDate": "13/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "In-line Niskin sampling (2.5L, SL, 10L, 20L)", "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+            ]},
+            {"name": "Sediment Sampling", "categories": [
+              {"name": "Gravity Corer",  "startDate": "24/10/2012", "endDate": "02/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Multicorer", "startDate": "27/10/2012", "endDate": "23/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Van Veen Grab", "startDate": "19/10/2012", "endDate": "13/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"},
+              {"name": "Compact Box Corer", "startDate": "14/10/2012", "endDate": "14/04/2013", "Quantity": "2", "Rate":"10" ,"Unit":"10", "Charge":"100"}
+            
+        ]}
+          ]}
+        
+  }
+}

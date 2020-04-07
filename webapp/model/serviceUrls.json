@@ -1,0 +1,15 @@
+{
+	"adminScreen":"model/Admin.json",
+	"adminScreen2":"model/masterData.json",
+	"requestInfo":"model/requestInfo.json",
+	"CMR_ReqForm_Get":"model/CMR_Header_Get.json",
+	"CMR_ReqForm_POST":"model/CMR_Header_POST.json",
+	"request_Post":"model/requestInfo.json",
+	"postRequestForLab":"https://sthpodq.kaust.edu.sa:50501/kclrfs/rest/cmr/saveCmrHeader",
+	"Clothing":"model/Clothing.json",
+	"treeUrl":"https://sthpodq.kaust.edu.sa:50501/kclrfs/rest/admin_resource/getResourceTree",
+	"createResource":"https://sthpodq.kaust.edu.sa:50501/kclrfs/rest/admin_resource/adminResource",
+	"getResourceById":"https://sthpodq.kaust.edu.sa:50501/kclrfs/rest/admin_resource/getResource/",
+	"getResourceInitially":"model/resourceData.json",
+	"updateResource":"https://sthpodq.kaust.edu.sa:50501/kclrfs/rest/admin_resource/updateResource"
+}

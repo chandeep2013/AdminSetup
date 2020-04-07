@@ -1,0 +1,416 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified" xmlns:u="sap.ui.unified" 
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tree="sap.ui.table">
+	<Panel height="auto" width="auto" backgroundDesign="Solid" class="sapUiResponsiveMargin sapUiResponsiveContentPadding">
+		<!--<headerToolbar>-->
+		<!--	<Toolbar>-->
+		<!--		<Label design="Bold" text="Engineering RequestForm"/>-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<Label id="idTodaysDateLabel" design="Bold"/>-->
+		<!--	</Toolbar>-->
+		<!--</headerToolbar>-->
+		<content>
+			<!--<VBox class="sapUiSmallMargin">-->
+			<!--	<Label id="idSpecificaitonLabel" text="Project Specification" design="Bold"/>-->
+			<!--	<HBox id="idProjectSpecification">-->
+			<!--		<Label id="idRequestType" text="Request Type" design="Bold" required="true"/>-->
+			<!--		<CheckBox id="idConsultation" text="Consultation"/>-->
+			<!--		<CheckBox id="idFabrication" text="Fabrication and Repairs"/>-->
+			<!--		<CheckBox id="idFacilities" text="Facilities Usage, Testing and Calibration "/>-->
+			<!--	</HBox>-->
+			<!--</VBox>-->
+			<!--<VBox class="sapUiSmallMargin">-->
+			<!--	<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20"-->
+			<!--		growingScrollToLoad="true" class="sapUiResponsiveMargin" id="idEngineeringLab" items="{/EngineeringInfo}">-->
+			<!--########### header toolbar to add title add button for the table ##############-->
+			<!--		<headerToolbar>-->
+			<!--			<Toolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">-->
+			<!--				<content>-->
+			<!--					<Label text="Equipments Requested" design="Bold"/>-->
+			<!--					<ToolbarSpacer/>-->
+			<!--					<Button text="add" type="Emphasized" press="onPressAddEquipments"></Button>-->
+			<!--					<Button text="upload" type="Emphasized" ></Button>-->
+			<!--				</content>-->
+			<!--			</Toolbar>-->
+			<!--		</headerToolbar>-->
+			<!--		<columns>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Category" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Description" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Start" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="End" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Quantity" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--			<Column width="auto" hAlign="Left" demandPopin="true" popinDisplay="Inline" >-->
+			<!--				<header>-->
+			<!--					<Text text="Calculted Charge" wrapping="true"/>-->
+			<!--				</header>-->
+			<!--				<footer/>-->
+			<!--			</Column>-->
+			<!--		</columns>-->
+			<!--		<items>-->
+			<!--			<ColumnListItem>-->
+			<!--				<cells>-->
+			<!--					<ComboBox value="{Category}" placeholder="Category"/>-->
+			<!--					<ComboBox value="{Description}" placeholder="Description"/>-->
+			<!--					<DatePicker value="{Start}" placeholder="StartDate"/>-->
+			<!--					<DatePicker value="{End}" placeholder="EndDate"/>-->
+			<!--					<Input value="{Quantity}" placeholder="Quantity"/>-->
+			<!--					<Input value="{Rate}" placeholder="Rate"/>-->
+			<!--					<Input value="{Unit}" placeholder="Unit"/>-->
+			<!--					<Input value="{CalcultedCharge}" placeholder="CalcultedCharge" />-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--		</items>-->
+			<!--	</Table>-->
+			<!--	<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">-->
+			<!--		<content>-->
+			<!--			<ToolbarSpacer width="80%"/>-->
+			<!--		</content>-->
+			<!--	</OverflowToolbar>-->
+			<!--</VBox>-->
+			<html:div class="main-wrap">
+				<html:div class="container-wrapper">
+					<html:div class="row font-s14 margin-t10">
+						<html:div class="cols-10">Engineering Request Form</html:div>
+						<html:div class="cols-2">Date:04/09/2019
+							<Label id="idTodaysDateLabel123" design="Bold"/></html:div>
+					</html:div>
+					<html:div class="row font-s13">
+						<html:div class="cols-12">
+							<html:div class="row border-arround">
+								<html:div class="cols-12 border-btm">Project Specification</html:div>
+								<html:div class="cols-12 align-items-top">
+									<html:label class="label-text">Request Type
+										<html:span class="mandatory-sign">*</html:span>
+									</html:label>
+									<html:div class="flex-wrap">
+										<html:div class="main-items-chk">
+											<!--		<CheckBox id="idConsultation" text="Consultation"/>-->
+											<!--		<CheckBox id="idFabrication" text="Fabrication and Repairs"/>-->
+											<!--		<CheckBox id="idFacilities" text="Facilities Usage, Testing and Calibration "/>-->
+											<html:span class="c-checkbox margin-r25"><CheckBox id="idConsultation" text="Consultation" selected="{data>/engineerRequestForm/consultationType}"/></html:span>
+											<html:span class="c-checkbox margin-r25"><CheckBox id="idFabrication" text="Fabrication and Repairs" selected="{data>/engineerRequestForm/fabricationAndRepairs}"/></html:span>
+											<html:span class="c-checkbox margin-r25"><CheckBox id="idFacilities" text="Facilities Usage, Testing and Calibration " selected="{data>/engineerRequestForm/facilitiesUsage}"/></html:span>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+						</html:div>
+						<html:div class="cols-12 font-s13">Equipments Requested</html:div>
+						<html:div class="cols-12 font-s13">
+							<html:div class="table-container">
+								<!--<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"-->
+								<!--	class="sapUiResponsiveMargin" id="idEngineeringLab" items="{/EngineeringInfo}">-->
+									<!--<headerToolbar>-->
+									<!--	<Toolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">-->
+									<!--		<content>-->
+									<!--			<Label text="Equipments Requested" design="Bold"/>-->
+									<!--			<ToolbarSpacer/>-->
+									<!--			<Button text="add" type="Emphasized" press="onPressAddEquipments"></Button>-->
+									<!--			<Button text="upload" type="Emphasized" ></Button>-->
+									<!--		</content>-->
+									<!--	</Toolbar>-->
+									<!--</headerToolbar>-->
+								<!--	<columns>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Category" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Description" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Start" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="End" width="auto" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Quantity" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--		<Column width="auto" hAlign="Left" demandPopin="true" popinDisplay="Inline">-->
+								<!--			<header>-->
+								<!--				<Text text="Calculted Charge" wrapping="true"/>-->
+								<!--			</header>-->
+								<!--			<footer/>-->
+								<!--		</Column>-->
+								<!--	</columns>-->
+								<!--	<items>-->
+								<!--		<ColumnListItem>-->
+								<!--			<cells>-->
+								<!--				<ComboBox value="{Category}" placeholder="Category"/>-->
+								<!--				<ComboBox value="{Description}" placeholder="Description"/>-->
+								<!--				<DatePicker value="{Start}" placeholder="StartDate"/>-->
+								<!--				<DatePicker value="{End}" placeholder="EndDate"/>-->
+								<!--				<Input value="{Quantity}" placeholder="Quantity"/>-->
+								<!--				<Input value="{Rate}" placeholder="Rate" type="Number"/>-->
+								<!--				<Input value="{Unit}" placeholder="Unit" type="Number"/>-->
+								<!--				<Input value="{CalcultedCharge}" placeholder="CalcultedCharge" type="Number"/>-->
+								<!--			</cells>-->
+								<!--		</ColumnListItem>-->
+								<!--	</items>-->
+								<!--</Table>-->
+								<!--<html:div class="row col-small-padding border-btm margin-b10">-->
+								<!--	<html:div class="cols-12 align-items-center">-->
+								<!--		<Button class="addmore" icon="sap-icon://sys-add" text="Add Resource" press="onPressAddEquipments"></Button>-->
+										<!--<html:button class="icon-btn icon-add">Add Resource</html:button>-->
+								<!--	</html:div>-->
+								<!--</html:div>-->
+								<html:div class= "cols-12 padding-20">
+								<tree:TreeTable id="TreeTable" class="catTable" rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}" selectionMode="MultiToggle"
+									enableSelectAll="false" ariaLabelledBy="title">
+									<tree:columns>
+										<tree:Column width="17rem">
+											<Label text="Categories"/>
+											<tree:template>
+												<Text text="{name}" wrapping="false"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Start Date"/>
+											<tree:template>
+												<DatePicker class="tableData" value="{startDate}" visible="{= !!${startDate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="End Date"/>
+											<tree:template>
+												<DatePicker class="tableData" value="{endDate}" visible="{= !!${endDate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Quantity"/>
+											<tree:template>
+												<Input value="{Quantity}" visible="{= !!${Quantity}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Rate"/>
+											<tree:template>
+												<Input value="{Rate}" visible="{= !!${Rate}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Unit"/>
+											<tree:template>
+												<Input value="{Unit}" visible="{= !!${Unit}}"/>
+											</tree:template>
+										</tree:Column>
+										<tree:Column>
+											<Label text="Charge"/>
+											<tree:template>
+												<Input value="{Charge}" visible="{= !!${Charge}}"/>
+											</tree:template>
+										</tree:Column>
+									</tree:columns>
+								</tree:TreeTable>
+								</html:div>
+								<html:div class="row col-small-padding">
+									<html:div class="cols-12 flex-wrap">
+										<html:label class="label-text">Attachment:</html:label>
+										<html:ul class="attachments-container">
+											<html:li>
+												<u:FileUploader id="fileUploader2" uploadProgress="onUploadProgress" uploadStart="onUploadStart"
+													uploadComplete="onFileUploaderUploadComplete" buttonOnly="true" buttonText="Upload" uploadOnChange="true" sendXHR="true"/>
+											</html:li>
+										</html:ul>
+										<!--<html:div class="attachment-add-btns">-->
+										<!--	<Button text="upload" ></Button>-->
+										<!--<html:button class="icon-btn icon-add">Add</html:button>-->
+										<!--</html:div>-->
+									</html:div>
+								</html:div>
+								<html:div class="action-buttons-container ">
+									<Button text="Save" press="onPressSaveEnginneringRequestForm"></Button>
+								</html:div>
+							</html:div>
+							<!--<html:div class="table-container">-->
+							<!--  <html:div class="row col-small-padding table-title">-->
+							<!--    <html:div class="cols-2">Category</html:div>-->
+							<!--    <html:div class="cols-2">Description</html:div>-->
+							<!--    <html:div class="cols-2">Start</html:div>-->
+							<!--    <html:div class="cols-2">End</html:div>-->
+							<!--    <html:div class="cols-1">Quantity</html:div>-->
+							<!--    <html:div class="cols-1">Rate</html:div>-->
+							<!--    <html:div class="cols-1">Unit</html:div>-->
+							<!--    <html:div class="cols-1">Calculted Charge</html:div>-->
+							<!--  </html:div>-->
+							<!--  <html:div class="row col-small-padding table-data">-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="c-dropdown c-small-dp open1">-->
+							<!--        <html:span>dropdown1</html:span><html:span class="c-arrow"></html:span>-->
+							<!--        <html:ul class="c-dropdownlist">-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--        </html:ul>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="c-dropdown c-small-dp open1">-->
+							<!--        <html:span>dropdown1</html:span><html:span class="c-arrow"></html:span>-->
+							<!--        <html:ul class="c-dropdownlist">-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--        </html:ul>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="date-picker">-->
+							<!--        <html:input class="input-text" type="text" placeholder="" />-->
+							<!--        <html:span class="calendar-icon"></html:span>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="date-picker">-->
+							<!--        <html:input class="input-text" type="text" placeholder="" />-->
+							<!--        <html:span class="calendar-icon"></html:span>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--<html:div class="cols-1"><html:input class="input-text" type="text" placeholder="Quantity" /></html:div>-->
+							<!--<html:div class="cols-1"><html:input class="input-text" type="text" placeholder="charge" /></html:div>-->
+							<!--<html:div class="cols-1"><html:input class="input-text" type="text" placeholder="unit" /></html:div>-->
+							<!--<html:div class="cols-1"><html:input class="input-text" type="text" placeholder="auto calculated" /></html:div>-->
+							<!--  </html:div>-->
+							<!--  <html:div class="row col-small-padding table-data no-border-btm">-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="c-dropdown c-small-dp open1">-->
+							<!--        <html:span>dropdown1</html:span><html:span class="c-arrow"></html:span>-->
+							<!--        <html:ul class="c-dropdownlist">-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--        </html:ul>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="c-dropdown c-small-dp open1">-->
+							<!--        <html:span>dropdown1</html:span><html:span class="c-arrow"></html:span>-->
+							<!--        <html:ul class="c-dropdownlist">-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--          <html:li>List 1</html:li>-->
+							<!--          <html:li>List 2</html:li>-->
+							<!--        </html:ul>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="date-picker">-->
+							<!--        <html:input class="input-text" type="text" placeholder="" />-->
+							<!--        <html:span class="calendar-icon"></html:span>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-2">-->
+							<!--      <html:div class="date-picker">-->
+							<!--        <html:input class="input-text" type="text" placeholder="" />-->
+							<!--        <html:span class="calendar-icon"></html:span>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--    <html:div class="cols-1"><html:input class="input-text" type="text" placeholder="Quantity" /></html:div>-->
+							<!--    <html:div class="cols-1"><html:input class="input-text" type="text" placeholder="charge" /></html:div>-->
+							<!--    <html:div class="cols-1"><html:input class="input-text" type="text" placeholder="unit" /></html:div>-->
+							<!--    <html:div class="cols-1"><html:input class="input-text" type="text" placeholder="auto calculated" /></html:div>-->
+							<!--  </html:div>-->
+							<!--  <html:div class="row col-small-padding border-btm margin-b10">-->
+							<!--    <html:div class="cols-12 align-items-center">-->
+							<!--      <html:button class="icon-btn icon-add">Add Resource</html:button>-->
+							<!--    </html:div>-->
+							<!--  </html:div>-->
+							<!--  <html:div class="row col-small-padding">-->
+							<!--    <html:div class="cols-12 flex-wrap">-->
+							<!--      <html:label class="label-text">Attachment:</html:label>-->
+							<!--      <html:ul class="attachments-container">-->
+							<!--        <html:li>-->
+							<!--<html:input type="file" name="choose file">-->
+							<!--        </html:li>-->
+							<!--      </html:ul>-->
+							<!--      <html:div class="attachment-add-btns">-->
+							<!--        <html:button class="icon-btn icon-add">Add</html:button>-->
+							<!--      </html:div>-->
+							<!--    </html:div>-->
+							<!--  </html:div>-->
+							<!--  <html:div class="action-buttons-container ">-->
+							<!--    <html:button class="btn small secondary margin-r10">Back</html:button>-->
+							<!--    <html:button class="btn small secondary">Next</html:button>-->
+							<!--  </html:div>-->
+							<!--</html:div>-->
+						</html:div>
+					</html:div>
+				</html:div>
+			</html:div>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

@@ -1,0 +1,241 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="PlantGrowth.CoreLabs.controller.projectInfo"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:u="sap.ui.unified">
+	<App id="app">
+		<html:div class="main-wrap">
+			<html:div class="navigation-panel">
+				<html:ul class="menu-container">
+					<html:li>Team Approval</html:li>
+					<html:li class="has-child-menu active">Tour Request</html:li>
+					<html:li>RFS</html:li>
+					<html:li class="active">New RFS</html:li>
+					<html:li>My Documents</html:li>
+				</html:ul>
+			</html:div>
+			<html:div class="container-wrapper">
+				<html:div class="row font-s14 margin-t10">
+					<html:div class="cols-10">Request Form</html:div>
+					<html:div class="cols-2">Date:
+						<Label text="{path:'reqModel>/currDate'}" width="100%"/>
+					</html:div>
+				</html:div>
+				<!--<html:div class="row font-s13 align-items-top">-->
+				<!--	<html:div class="cols-12 align-items-top">-->
+				<!--		<html:label class="label-text">Service Area-->
+				<!--			<html:span class="mandatory-sign">*</html:span>-->
+				<!--		</html:label>-->
+				<!--		<html:div class="flex-wrap">-->
+				<!--			<html:div class="main-items-chk">-->
+				<!--				<html:span class="c-checkbox margin-r25">-->
+				<!--					<CheckBox xmlns="sap.m" text="Marine Operations" id="marine" selected="{path:'reqModel>/marineOperation'}" select="showOptions"/>-->
+				<!--				</html:span>-->
+				<!--				<html:span class="c-checkbox margin-r25">-->
+				<!--					<CheckBox xmlns="sap.m" text="Engineering" id="engineering" selected="{path:'reqModel>/engineering'}"/>-->
+				<!--				</html:span>-->
+				<!--				<html:span class="c-checkbox margin-r25">-->
+				<!--					<CheckBox xmlns="sap.m" text="Sea Labs" id="seaLabs" selected="{path:'reqModel>/seaLab'}"/>-->
+				<!--				</html:span>-->
+				<!--			</html:div>-->
+				<!--			<html:div class="">-->
+				<!--				<html:span class="c-checkbox margin-r25">-->
+				<!--					<CheckBox xmlns="sap.m" text="Field Work Request" id="fieldWork" selected="{path:'reqModel>/fieldWork'}" visible="false"/>-->
+				<!--				</html:span>-->
+				<!--				<html:span class="c-checkbox margin-r25">-->
+				<!--					<CheckBox xmlns="sap.m" text="Field Equipment Request" id="fieldEquip" selected="{path:'reqModel>/fieldEquipment'}" visible="false"/>-->
+				<!--				</html:span>-->
+				<!--			</html:div>-->
+				<!--		</html:div>-->
+				<!--	</html:div>-->
+				<!--</html:div>-->
+				<!-- ############ Icon Tab bar for project info and group info ###################-->
+				<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+					<items>
+						<!-- ################### Project Info ####################-->
+						<IconTabFilter text="Project Info">
+							<html:div class="row font-s13 justify-content-center">
+								<html:div class="cols-12 font-s14 margin-t10">
+									Project Information
+								</html:div>
+								<html:div class="cols-11 no-padding">
+									<html:div class="row project-info-container">
+										<html:div class="cols-6">
+											<html:label class="label-text">Title:
+												<html:span class="mandatory-sign">*</html:span>
+											</html:label>
+											<Input class="input-text small label-width-adjust" value="{path:'reqModel>/projectTitle'}" xmlns="sap.m" placeholder="Enter Project title"
+												validationError="inputValidation" required="true"/>
+										</html:div>
+										<html:div class="cols-6">
+											<html:label class="label-text">Project ID:
+												<html:span class="mandatory-sign">*</html:span>
+											</html:label>
+											<Input class="input-text small label-width-adjust" value="{path:'reqModel>/projectId'}" xmlns="sap.m" placeholder="Enter Project ID"/>
+										</html:div>
+										<html:div class="cols-6">
+											<html:label class="label-text">Start Date:
+												<html:span class="mandatory-sign">*</html:span>
+											</html:label>
+											<html:div class="date-picker">
+												<html:input class="input-text small datepicker" id="startDate" type="text" placeholder=" "/>
+											</html:div>
+										</html:div>
+										<html:div class="cols-6">
+											<html:label class="label-text">End Date:
+												<html:span class="mandatory-sign">*</html:span>
+											</html:label>
+											<html:div class="date-picker">
+												<html:input class="input-text small datepicker" id="endDate" type="text" placeholder=" "/>
+											</html:div>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+							<html:div class="row font-s13 margin-t10 border-top padding-t10">
+								<html:div class="cols-12 no-padding-btm">
+									Description of Work
+									<html:span class="mandatory-sign">*</html:span>
+								</html:div>
+								<html:div class="cols-10">
+									<TextArea xmlns="sap.m" class="no-margin work-desc" value="{path:'reqModel>/descriptionOfWork'}" placeholder="Work Description" rows="4"
+										cols="120" id="area0"/>
+								</html:div>
+								<html:div class="cols-12 flex-wrap">
+									<html:label class="label-text">Attachment:</html:label>
+									<html:ul class="attachments-container">
+										<html:li>
+											<u:FileUploader id="fileUploader" uploadProgress="onUploadProgress" uploadStart="onUploadStart"
+												uploadComplete="onFileUploaderUploadComplete" buttonOnly="true" buttonText="Upload" uploadOnChange="true" sendXHR="true"/>
+										</html:li>
+									</html:ul>
+									<!--<html:div class="attachment-add-btns">
+										<html:button class="icon-btn icon-add">Add</html:button>
+									</html:div>-->
+								</html:div>
+								<html:div class="cols-12">
+									<html:div class="action-buttons-container margin-t10">
+										<Button xmlns="sap.m" class="margin-r10" text="Next" press="createReqObj"/>
+									</html:div>
+								</html:div>
+							</html:div>
+						</IconTabFilter>
+						<!-- ########### Group Information ############-->
+						<IconTabFilter text="Group Info" key="groupInfo">
+							<VBox>
+								<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+									class="sapUiResponsiveMargin" id="idGroupInfo" items="{/GroupInfo}">
+									<headerToolbar>
+										<Toolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+											<content>
+												<Title text="Group Information" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+												<ToolbarSpacer/>
+												<Button press="onAddGrop" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true"
+													iconDensityAware="false"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="auto" hAlign="Left" minScreenWidth="Phone">
+											<header>
+												<Text text="Name"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" minScreenWidth="Tablet">
+											<header>
+												<Text text="Dapartment"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<header>
+												<Text text="Group Name"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="5%"></Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Input placeholder="Name" value="{Name}" width="70%"/>
+												<Input placeholder="Department" value="{Groupname}" width="70%"/>
+												<Input placeholder="Group Name" value="{Department}" width="70%"/>
+												<Button class="buttonClass" icon="sap-icon://delete" width="50px" press="onDeleteGroup"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</VBox>
+							<!-- ############# Lab Researcher #####################-->
+							<VBox>
+								<Table width="auto" noDataText="No data" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+									class="sapUiResponsiveMargin" id="idLabReasercherInfo" items="{/reasercherInfo}">
+									<headerToolbar>
+										<Toolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+											<content>
+												<Title text="Lab Researcher" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+												<ToolbarSpacer/>
+												<Button press="onAddReacher" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true"
+													iconDensityAware="false"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="auto" hAlign="Left" minScreenWidth="Phone">
+											<header>
+												<Text text="Name"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" minScreenWidth="Tablet">
+											<header>
+												<Text text="Kaust ID"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<header>
+												<Text text="Group Name"/>
+											</header>
+											<footer/>
+										</Column>
+										<Column width="5%"></Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Input placeholder="Name" value="{Name}" width="70%"/>
+												<Input placeholder="Kaust ID" value="{Groupname}" width="70%"/>
+												<Input placeholder="Group Name" value="{KaustId}" width="70%"/>
+												<Button icon="sap-icon://delete" width="50px" press="onDeleteResearcher"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</VBox>
+							<html:div class="row col-small-padding margin-b10">
+								<html:div class="cols-12 font-s14">Research Emergency</html:div>
+								<html:div class="cols-12 align-items-top">
+									<html:div class="flex margin-b10 emergency-contact-info">
+										<html:div class="list-item">
+											<Label class="item-label" text="Contact 1#"></Label>
+											<Input class="input-text small" placeholder="Contact No"/>
+										</html:div>
+										<html:div class="list-item">
+											<Label class="item-label" text="Contact 2#"></Label>
+											<Input class="input-text small" placeholder="Contact No"/>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+							<html:div class="cols-12">
+								<html:div class="action-buttons-container margin-t10">
+									<Button xmlns="sap.m" class="margin-r10" text="Submit" press="createReqObj2"/>
+								</html:div>
+							</html:div>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</html:div>
+		</html:div>
+	</App>
+</mvc:View>

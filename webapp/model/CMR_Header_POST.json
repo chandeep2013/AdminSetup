@@ -1,0 +1,47 @@
+{
+  "marineOperation":false,
+  "engineering": false,
+  "seaLab": false,
+  "fieldWork": false,
+  "fieldEquipment": false,
+  "projectTitle": "",
+  "projectId": "",
+  "projectStartDate": "13/08/2019",
+  "projectEndDate": "",
+  "descriptionOfWork": "",
+  "attachments": [
+      {
+        "fileId": "",
+        "fileName": "",
+        "uploadedBy": "",
+        "uploadedByKaustId": "",
+        "uploadFileUrl": ""
+      }
+   ],
+  "groupInfo":[
+    {
+      "name": "",
+      "groupDept": "",
+      "groupName": ""
+    },
+    {
+      "name": "",
+      "groupDept": "",
+      "groupName": ""
+    }
+   ],
+   "labResearcher":[
+     {
+       "name":"",
+       "kaustId": "",
+       "mobileNum": ""
+     },
+     {
+       "name":"",
+       "kaustId": "",
+       "mobileNum": ""
+     }
+   ],
+   "researchEmergencyContact1": "",
+   "researchEmergencyContact2": ""
+}

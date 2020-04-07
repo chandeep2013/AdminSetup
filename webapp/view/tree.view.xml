@@ -1,0 +1,146 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="PlantGrowth.CoreLabs.controller.tree"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:u="sap.ui.unified">
+	<App >
+		<html:div>
+		<html:header class="admin-header">Admin Screen</html:header>
+		<html:div class="main-wrap">
+			<html:div class="container" id="container" role="main">
+				<html:div class="tree" id="tree"></html:div>
+				<html:div class="data" id="data">
+					<html:div class="content code" style="display:none;">
+						<html:textarea id="code" readonly="readonly"></html:textarea>
+					</html:div>
+					<html:div class="content folder" style="display:none;"></html:div>
+					<html:div class="content image" style="display:none; position:relative;"><html:img src="" alt="" style="display:block; position:absolute; left:50%; top:50%; padding:0; max-height:90%; max-width:90%;"/></html:div>
+					<html:div id="resource" class="content default" style="text-align:center;">Select a Resource from the tree.</html:div>
+				</html:div>
+			</html:div>
+			<html:div id="adminForm" style="display:none">
+				<html:div class="container-wrapper">
+					<html:div class="row">
+						<html:div class="cols-12 font-s13 section-container flex-wrap">
+							<html:div class="row col-small-padding ">
+								<html:div class="flex margin-b10">
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Stock Max</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/stockMax}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Owner</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/owner}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">
+											Description
+										</html:div>
+										<Input id="vessel" placeholder="Enter Input" value="{InputValue>/resourceDescription}"/>
+									</html:div>
+									
+								</html:div>
+								<html:div class="flex margin-b10">
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Info Pic Filename</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/infoPicFileName}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Info File Link</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/infoPicFileLink}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Info Note to Display</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/infoNoteToDisplay}"/>
+									</html:div>
+									
+								</html:div>
+								<html:div class="flex margin-b10">
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Unit Rate1</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/unitRate1}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Unit Rate2</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/unitRate2}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Unit Rate3</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/unitRate3}"/>
+									</html:div>
+									
+								</html:div>
+								<html:div class="flex margin-b10">
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Unit</html:div>
+										<Input placeholder="Enter Input" value="{InputValue>/unit}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Min unit / day</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/minimumUnitADay}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Max unit / day
+										</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/maximumUnitADay}"/>
+									</html:div>
+								
+								</html:div>
+								<html:div class="flex margin-b10">
+										<html:div class="input-col">
+										<html:div class="flex padding-b10">Start Time</html:div>
+										<TimePicker class="TP1" value="{InputValue>/defaultStartTime}" valueFormat="hh:mm a" displayFormat="hh:mm a" change="handleChange"
+											placeholder="Enter meeting start time"/>
+										<!--<Input placeholder="Enter Input" value="{InputValue>/defaultStartTime}"/>-->
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">End Time</html:div>
+										<TimePicker class="TP2" value="{InputValue>/defaultEndTime}" valueFormat="hh:mm a" displayFormat="hh:mm a" change="handleChange"
+											placeholder="Enter meeting start time"/>
+										<!--<Input placeholder="Enter Input" value="{InputValue>/defaultEndTime}"/>-->
+									</html:div>
+										<html:div class="input-col">
+										<html:div class="flex padding-b10">Consumables Cost $</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/consumablesCost}"/>
+									</html:div>
+								
+								</html:div>
+								<html:div class="flex margin-b10">
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Mob Effort Hrs</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/mobEffortHours}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Mob End Effort Hrs</html:div>
+										<Input type="Number" placeholder="Enter Input" value="{InputValue>/mobEndEffortHours}"/>
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Charge mobs?</html:div>
+										<CheckBox selected="{InputValue>/chargeMobs}" text="Charge mobs?"/>
+										<!--<Input placeholder="Enter Input" value="{InputValue>/chargeMobs}"/>-->
+									</html:div>
+								</html:div>
+								<html:div class="flex ">
+										<html:div class="input-col">
+										<html:div class="flex padding-b10">Charge?</html:div>
+										<CheckBox selected="{ path :'InputValue>/isCharge'}" text="Charge?"/>
+										<!--<Input placeholder="Enter Input" value="{InputValue>/charge}"/>-->
+									</html:div>
+									<html:div class="input-col">
+										<html:div class="flex padding-b10">Charge Fri-Sat?</html:div>
+										<CheckBox selected="{InputValue>/chargeFriSat}" text="Charge Fri-Sat?"/>
+										<!--<Input placeholder="Enter Input" value="{InputValue>/chargeFriSat}"/>-->
+									</html:div>
+								
+										
+								</html:div>
+							</html:div>
+						</html:div>
+					</html:div>
+				</html:div>
+				<html:div class="action-buttons-container save">
+					<Button class="margin-r10 " text="Save" press="onSavePress"/>
+				</html:div>
+			</html:div>
+			<u:FileUploader id="admin_fileUploader" class="upload" fileType="xls" typeMissmatch="ontypeMissmatch" uploadComplete="onFileUploaderUploadComplete" buttonOnly="true" buttonText="Upload XLS File" uploadOnChange="true" multiple="true" sendXHR="true"/>
+		</html:div>
+		</html:div>
+	</App>
+</mvc:View>

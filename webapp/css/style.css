@@ -1,0 +1,2385 @@
+/* Enter your custom styles here */
+
+
+/*#container-CoreLabs---labs--idlistForMarine {*/
+
+
+/*    margin-left: 21%;*/
+
+
+/*}*/
+
+
+/*#container-CoreLabs---labs--idLabInfo {*/
+
+
+/*    margin-top: 10%;*/
+
+
+/*}*/
+
+
+/*#container-CoreLabs---labs--idLabList {*/
+
+
+/*    margin-left: 14%;*/
+
+
+/*}*/
+
+
+/*.arrange{*/
+
+
+/*	margin-left: 21%;*/
+
+
+/*}*/
+
+
+/*#idProjectSpecification {*/
+
+
+/*    margin-top: 2% !important;*/
+
+
+/*}*/
+
+
+/*.sapMITBFilter .sapMITBText {*/
+
+
+/*    line-height: 0.875rem;*/
+
+
+/*    overflow: hidden;*/
+
+
+/*    padding: 0.375rem 0 0;*/
+
+
+/*    position: relative;*/
+
+
+/*    text-overflow: ellipsis;*/
+
+
+/*    width: 6.1rem;*/
+
+
+/*    color: #6a6d70;*/
+
+
+/*    text-shadow: none;*/
+
+
+/*}*/
+
+
+/*.sapUiMediumMarginBottom {*/
+
+
+/*    margin-bottom: 0rem!important;*/
+
+
+/*}*/
+
+
+/*.custom-loader {*/
+
+
+/*			    position:fixed;*/
+
+
+/*			    width:100%;*/
+
+
+/*			    left:0;right:0;top:0;bottom:0;*/
+
+
+/*			    background-color: rgba(255,255,255,0.7);*/
+
+
+/*			    z-index:9999;*/
+
+
+/*			    display:none;*/
+
+
+/*			}*/
+
+
+/*			@-webkit-keyframes spin {*/
+
+
+/*				from {-webkit-transform:rotate(0deg);}*/
+
+
+/*				to {-webkit-transform:rotate(360deg);}*/
+
+
+/*			}*/
+
+
+/*			@keyframes spin {*/
+
+
+/*				from {transform:rotate(0deg);}*/
+
+
+/*				to {transform:rotate(360deg);}*/
+
+
+/*			}*/
+
+
+/*			.custom-loader::after {*/
+
+
+/*			    content:'';*/
+
+
+/*			    display:block;*/
+
+
+/*			    position:absolute;*/
+
+
+/*			    left:48%;top:40%;*/
+
+
+/*			    width:40px;height:40px;*/
+
+
+/*			    border-style:solid;*/
+
+
+/*			    border-color:black;*/
+
+
+/*			    border-top-color:transparent;*/
+
+
+/*			    border-width: 4px;*/
+
+
+/*			    border-radius:50%;*/
+
+
+/*			    -webkit-animation: spin .8s linear infinite;*/
+
+
+/*			    animation: spin .8s linear infinite;*/
+
+
+/*			}*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,500,400,700');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/*span{*/
+
+
+/*	width:100%;*/
+
+
+/*}*/
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* CMR default styles : Starts */
+
+html,
+body,
+.sapMPanelHdr {
+    font-family: "Raleway", Helvetica, Arial, serif !important;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button,
+label textarea,
+input {
+    font-family: "Raleway", Helvetica, Arial, serif !important;
+}
+
+a {
+    color: #237cd3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+textarea,
+.sapMTextAreaInner {
+    border: 1px solid #dfe2e9;
+    color: #9f9f9e;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 14px;
+    resize: none;
+    height: 60px;
+    /*margin-top: 20px;*/
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="text"].sapMInputBaseInner,
+input[type="number"].sapMInputBaseInner {
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    color: #4f5858;
+    font-size: 16px;
+    font-family: "Raleway", Helvetica, Arial, serif;
+    font-weight: 600;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input.max-width {
+    max-width: 250px !important;
+}
+
+.required-field {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 14px;
+    color: red;
+    vertical-align: top;
+    margin-left: 3px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.v-align-middle {
+    vertical-align: middle;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+.inputs-group .input-item {
+    display: flex;
+    margin: 0 5px 0 0;
+    align-items: center;
+    min-width: 132px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 3px 0;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    margin: 0 4px 2px 0;
+    vertical-align: middle;
+}
+
+.alert-message {
+    color: red;
+    line-height: 16px;
+}
+
+.min-width-180 {
+    min-width: 180px !important;
+}
+
+
+/* CMR default styles : Ends */
+
+
+/*set Background color style: Starts */
+
+.gray-bg {
+    background-color: #f5faff;
+}
+
+
+/*set Background color style: Ends */
+
+
+/* Border styles: Starts */
+
+.no-border {
+    border: 0 none !important;
+}
+
+.no-border-btm {
+    border-bottom: 0 none !important;
+}
+
+.no-border-top {
+    border-top: 0 none !important;
+}
+
+.border-top {
+    border-top: 1px solid #eff1f4;
+}
+
+.border-right {
+    border-right: 1px solid #eff1f4;
+}
+
+.border-btm {
+    border-bottom: 1px solid #eff1f4;
+}
+
+.border-left {
+    border-left: 1px solid #eff1f4;
+}
+
+.border-arround {
+    border: 1px solid #dfe2e9;
+}
+
+.border-btm2 {
+    border-bottom: 2px solid #eff1f4;
+}
+
+
+/* Border styles: Starts */
+
+
+/* Margin and padding: Starts */
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-left,
+.no-padding-left[class|=cols] {
+    padding-left: 0 !important;
+}
+
+.no-padding-right,
+.no-padding-right[class|=cols] {
+    padding-right: 0 !important;
+}
+
+.no-padding-top,
+.no-padding-top[class|=cols] {
+    padding-top: 0 !important;
+}
+
+.no-padding-btm,
+.no-padding-btm[class|=cols] {
+    padding-bottom: 0 !important;
+}
+
+.no-margin-l {
+    margin-left: 0 !important;
+}
+
+.no-margin-r {
+    margin-right: 0 !important;
+}
+
+.margin-b5 {
+    margin-bottom: 5px;
+}
+
+.margin-r10 {
+    margin-right: 10px;
+}
+
+.margin-l10 {
+    margin-left: 10px;
+}
+
+.margin-t10 {
+    margin-top: 10px;
+}
+
+.margin-b10 {
+    margin-bottom: 10px;
+}
+
+.margin-r25 {
+    margin-right: 25px;
+}
+
+.padding-t10 {
+    padding-top: 10px;
+}
+
+.padding-b5 {
+    padding-bottom: 5px;
+}
+
+.padding-b10 {
+    padding-bottom: 10px;
+}
+
+.padding-5 {
+    padding: 5px !important;
+}
+
+.padding-10 {
+    padding: 10px !important;
+}
+
+.padding-20 {
+    padding: 20px !important;
+}
+
+
+/* Margin and padding: Ends */
+
+
+/* Various font - sizes: Starts */
+
+.font-s10 {
+    font-size: 10px;
+}
+
+.font-s11 {
+    font-size: 11px;
+}
+
+.font-s12 {
+    font-size: 12px;
+}
+
+.font-s13 {
+    font-size: 13px;
+}
+
+.font-s14 {
+    font-size: 14px;
+}
+
+.font-s15 {
+    font-size: 15px;
+}
+
+.font-s16 {
+    font-size: 16px;
+}
+
+.font-s18 {
+    font-size: 18px;
+}
+
+.font-s20 {
+    font-size: 20px;
+}
+
+.font-s24 {
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* Various font - sizes: Ends */
+
+
+/* Buttons styles: Starts */
+
+.icon-btn,
+.addmore .sapMBtnInner {
+    background-color: transparent;
+    background-size: 17px;
+    background-position: 2px 6px;
+    background-repeat: no-repeat;
+    border: none;
+    color: #666666;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 7px 4px 25px;
+    height: 30px;
+    margin-left: 10px;
+    min-width: 52px;
+}
+
+.icon-btn.icon-edit {
+    background-image: url(../Images/6-bidding-shipper-info-shape-4@2x.png);
+}
+
+.icon-btn.icon-save {
+    background-image: url(../Images/6-bidding-shipper-info-shape-5@2x.png);
+}
+
+.icon-btn.icon-add {
+    background-image: url(../Images/14-pe-entitlements-oval-5@2x.png);
+    background-position: 0 5px;
+    background-size: 20px;
+    position: relative;
+}
+
+.icon-btn.icon-remove {
+    background-image: url(../Images/rubbish-bin@2x.png);
+    background-size: 12px 17px;
+    background-position: 6px 6px;
+}
+
+.icon-btn.icon-add:before,
+.addmore .sapMBtnIcon {
+    /*content: "+";*/
+    font-size: 17px;
+    color: #666666;
+    font-weight: normal;
+    line-height: 12px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+}
+
+button.btn {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    height: 40px;
+    min-width: 112px;
+}
+
+button.btn.primary {
+    background-color: #f18f00;
+    color: #fff;
+}
+
+button.btn.secondary, .sapMBtnInner {
+    background-color: transparent;
+    border: 1px solid #635c5c;
+    color: #635c5c;
+}
+
+button.btn.outline-primary {
+    background-color: transparent;
+    border: 2px solid #f18f00;
+    color: #f18f00;
+    padding: 10px;
+    margin: 0;
+}
+
+button.btn.small,
+.sapMBtnInner {
+    font-size: 13px;
+    height: 30px;
+    padding: 7px 15px;
+    line-height: 14px;
+    min-width: auto;
+}
+
+
+/* Buttons styles: Ends */
+
+
+/* Custom dropdown component style: Starts */
+
+.c-dropdown {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 35px 10px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.c-dropdown.c-small-dp {
+    font-size: 12px;
+    height: 30px;
+    padding: 8px 25px 8px 10px;
+}
+
+.c-dropdown .c-arrow {
+    background-image: url(../Images/5-claims-path-13@2x.png);
+    background-position: 3px 6px;
+    background-size: 9px;
+    background-repeat: no-repeat;
+    border: 2px solid #666666;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    height: 15px;
+    width: 15px;
+}
+
+.c-dropdown.c-small-dp .c-arrow {
+    background-size: 7px;
+    background-position: 3px 5px;
+    height: 17px;
+    right: 5px;
+    top: 6px;
+    width: 17px;
+}
+
+.c-dropdown.open .c-arrow {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-180deg);
+}
+
+.c-dropdown.open .c-dropdownlist {
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+    overflow-y: auto;
+    max-height: 110px;
+}
+
+.c-dropdown .c-dropdownlist {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    height: auto;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    left: -1px;
+    top: 38px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    width: 100%;
+}
+
+.c-dropdown .c-dropdownlist li {
+    border-bottom: 1px solid #dfe2e9;
+    padding: 10px 15px;
+}
+
+.c-dropdown .c-dropdownlist li:last-child {
+    border-bottom: 0 none;
+}
+
+
+/* Custom dropdown component style: Ends */
+
+
+/* Checkbox component style: Starts */
+
+.c-checkbox {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px 5px 25px;
+    min-width: 160px;
+}
+
+.c-checkbox input[type="checkbox"] {
+    display: inline-block;
+    /*margin: 0 4px 2px 0;*/
+    margin: 0 0px 0px 0;
+    vertical-align: middle;
+}
+
+
+/* heckbox component style: Ends */
+
+
+/*Date picker component style: Starts */
+
+.date-picker {
+    position: relative;
+}
+
+.date-picker .calendar-icon {
+    background-image: url("../Images/calendar-copy@2x.png");
+    background-size: 20px;
+    background-position: 8px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 38px;
+}
+
+.row-space .date-picker .calendar-icon {
+    top: 15px;
+}
+
+.date-picker.small {
+    margin: 0 10px 0 5px;
+}
+
+.date-picker.small:last-child {
+    margin-right: 0;
+}
+
+.date-picker.small .input-text {
+    font-size: 12px;
+    line-height: 12px;
+    height: 30px;
+    padding: 6px 5px;
+}
+
+.date-picker.small .calendar-icon {
+    background-size: 14px;
+    background-position: 8px 8px;
+    height: 30px;
+    width: 30px;
+}
+
+
+/* Date picker component style: Ends */
+
+
+/* Menu Panel style: Starts */
+
+.navigation-panel {
+    background-color: #134b82;
+    font-size: 14px;
+    color: #fff;
+    width: 200px;
+}
+
+.menu-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-container li {
+    cursor: pointer;
+    display: flex;
+    font-size: 13px;
+    height: 45px;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.menu-container li.active {
+    background-color: #002d5a;
+    position: relative;
+}
+
+.menu-container li.active:before {
+    content: '';
+    border: 2px solid #fff;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu-container li.has-child-menu.active {
+    background-color: transparent;
+    padding-right: 32px;
+}
+
+.menu-container li.has-child-menu.active:before {
+    display: none;
+}
+
+.menu-container li.has-child-menu.active:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    right: 15px;
+    top: 17px;
+    height: 8px;
+    width: 8px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+.menu-container li.has-child-menu.active:hover:after {
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+}
+
+
+/* Menu Panel style: Ends */
+
+
+/*main wrapper, container, layout style: Starts */
+
+.header-wrapper {
+    background-color: #fff;
+    border: 1px solid #eff1f4;
+    color: #237cd3;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.logo-container {
+    border-right: 1px solid #eff1f4;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 200px;
+}
+
+.header-contents {
+    display: flex;
+    height: 100%;
+    padding: 10px 15px;
+    align-items: center;
+    width: calc(100% - 200px);
+}
+
+.main-wrap {
+    background-color: #fff;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom:50px;
+}
+
+.container-wrapper {
+    /*padding: 5px 15px;*/
+    width: 100%;
+    padding-right:15px;
+    padding-top:10px;
+}
+
+
+/* main wrapper, container, layout style: Ends */
+
+
+/* flex alignment related styles: Starts */
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-top {
+    align-items: flex-start;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-arround {
+    justify-content: space-around;
+}
+
+.justify-content-right {
+    justify-content: flex-end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+
+/* flex alignment related styles: Ends */
+
+
+/* row and col style: Starts */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.cols,
+.cols-1,
+.cols-2,
+.cols-3,
+.cols-4,
+.cols-5,
+.cols-6,
+.cols-7,
+.cols-8,
+.cols-9,
+.cols-10,
+.cols-11,
+.cols-12 {
+    display: flex;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.cols,
+.cols-1 {
+    width: 8.333%;
+}
+
+.cols-2 {
+    width: 16.666%;
+}
+
+.cols-3 {
+    width: 25%;
+}
+
+.cols-4 {
+    width: 33.333%;
+}
+
+.cols-5 {
+    width: 41.666%;
+}
+
+.cols-6 {
+    width: 50%;
+}
+
+.cols-7 {
+    width: 58.333%;
+}
+
+.cols-8 {
+    width: 66.666%;
+}
+
+.cols-9 {
+    width: 75%;
+}
+
+.cols-10 {
+    width: 83.333%;
+}
+
+.cols-11 {
+    width: 91.667%;
+}
+
+.cols-12 {
+    width: 100%;
+}
+
+.col-small-padding .col,
+.col-small-padding .cols,
+.col-small-padding > [class|=cols],
+.sapMColumnHeader {
+    padding: 8px 7px;
+}
+
+.col-xsmall-padding .col,
+.col-xsmall-padding .cols,
+.col-xsmall-padding > [class|=cols],
+.col-xsmall-padding > .row > [class|=cols] {
+    padding: 4px 2px;
+}
+
+.cols.check-box-col {
+    align-items: center;
+}
+
+.cols.check-box-col input[type="checkbox"] ~ .input-small,
+.col.check-box-col input[type="checkbox"] ~ .input-small {
+    width: calc(100% - 25px);
+}
+
+.cols.check-box-col input[type="checkbox"] ~ .c-dropdown,
+.col.check-box-col input[type="checkbox"] ~ .c-dropdown {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 25px);
+}
+
+.col-border .col {
+    border-right: 1px solid #dfe2e9;
+}
+
+
+/* row and col style: Ends */
+
+
+/* Table layout style: Starts */
+
+.table-wrap,
+.table-container {
+    border: 2px solid #eff1f4;
+    border-radius: 5px;
+    color: #4a6682;
+    padding: 0;
+    width: 100%;
+}
+
+.table-title,
+.sapMListTblHeader>.sapMTableTH {
+    background-color: #f5faff;
+    border-bottom: 2px solid #dfe2e9;
+    color: #7d88a9;
+}
+
+.table-data {
+    border-bottom: 1px solid #dfe2e9;
+}
+
+.table-data .date-picker .calendar-icon {
+    background-size: 15px;
+    background-position: 5px 8px;
+    height: 30px;
+    width: 24px;
+}
+
+.table-data .input-text {
+    font-size: 13px;
+    height: 30px;
+    padding: 10px 5px;
+}
+
+.table-title [class|=cols],
+.table-data [class|=cols] {
+    border-right: 1px solid #dfe2e9;
+}
+
+.table-title [class|=cols]:last-child,
+.table-data [class|=cols]:last-child {
+    border-right: 0 none;
+}
+
+
+/* Table layout style: Ends */
+
+
+/*Table style with specific Page :Starts */
+
+.equipment-request-table-container .cols-1:nth-child(1),
+.equipment-request-table-container .cols-1:nth-child(2),
+.equipment-request-table-container .cols-1:nth-child(3),
+.equipment-request-table-container .cols-1:nth-child(4),
+.equipment-request-table-container .cols-1:nth-child(5) {
+    width: 11.5%;
+}
+
+.equipment-request-table-container .cols-1:nth-child(8) {
+    width: 6%;
+}
+
+.equipment-request-table-container .cols-1:nth-child(9) {
+    width: 7%;
+}
+
+.equipment-request-table-container .cols-1:nth-child(10) {
+    width: 5%;
+}
+
+.equipment-request-table-container .cols-1:last-child {
+    width: 7.5%;
+}
+
+
+/*Table style with specific Page :Starts */
+
+
+/*Inner table style: Starts */
+
+.inner-table-container,
+.sapMListTbl {
+    border: 1px solid #dfe2e9;
+}
+
+.inner-table-container .cols,
+.sapMListTblCell {
+    min-width: 172px;
+}
+
+.inner-table-container.small-columns .cols {
+    padding: 8px 5px;
+    min-width: 97px;
+}
+
+.inner-table-container.medium-columns .cols {
+    min-width: 120px;
+}
+
+.inner-table-container .table-title .cols,
+.inner-table-container .table-data .cols,
+.inner-table-container .table-title .col,
+.inner-table-container .table-data .col {
+    border-right: 1px solid #dfe2e9;
+}
+
+.inner-table-container .table-title .cols:last-child,
+.inner-table-container .table-data .cols:last-child,
+.inner-table-container .table-title .col:last-child,
+.inner-table-container .table-data .col:last-child {
+    border-right: 0 none;
+}
+
+.inner-table-container .table-data:last-child {
+    border-bottom: 0 none;
+}
+
+
+/*Inner table style: Ends */
+
+
+/* Page specific stayle: Starts */
+
+.main-items-chk,
+.sub-items-check {
+    width: 100%;
+}
+
+.sub-items-check {
+    display: none;
+}
+
+.main-items-chk.item-slected ~ .sub-items-check {
+    display: block;
+    margin-top: 10px;
+}
+
+.label-text {
+    display: flex;
+    align-items: center;
+    min-width: 125px;
+}
+
+.label-text ~ .label-width-adjust {
+    display: flex;
+    width: calc(100% - 150px);
+}
+
+.mandatory-sign {
+    font-size: 24px;
+    color: red;
+    line-height: 14px;
+    margin-left: 3px;
+}
+
+input[type="text"].input-text.small,
+input[type="text"].sapMInputBaseInner,
+input[type="number"].sapMInputBaseInner,
+.sapMTimePicker input.sapMInputBaseInner {
+    font-size: 13px;
+    height: 32px;
+    padding: 5px 10px;
+}
+
+.input-text.small ~ .calendar-icon {
+    background-size: 15px;
+    background-position: 3px 8px;
+    height: 30px;
+    width: 24px;
+}
+
+.work-desc {
+    height: 120px;
+}
+
+.attachments-container {
+    display: flex;
+    width: calc(100% - 125px);
+}
+
+.attachment-add-btns {
+    padding: 10px 0 0 115px;
+    width: 100%;
+}
+
+.add-btn-column {
+    display: flex;
+    padding-top: 28px;
+    width: 100px;
+}
+
+.inputs-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 100px);
+}
+
+.input-col {
+    padding: 5px 10px 10px;
+    width: 33.3%;
+}
+
+.section-container {
+    color: #4a6682;
+    display: flex;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.emergency-contact-info {
+    justify-content: space-between;
+}
+
+.emergency-contact-info .list-item {
+    display: flex;
+    padding: 0 15px 0 110px;
+    width: 50%;
+}
+
+.list-item .item-label {
+    padding-top: 10px;
+    width: 110px;
+}
+
+.fieldwork-request-container .label-col {
+    padding: 10px 0;
+    line-height: 16px;
+    max-width: 150px;
+}
+
+.fieldwork-request-container .description-detail {
+    padding: 10px;
+    width: calc(100% - 150px);
+}
+
+.fieldwork-request-container .text-area,
+.fieldwork-request-container .sapMInputBase.sapMTextArea {
+    padding-left: 0px !important;
+    height: 85px;
+    width: 100%;
+}
+
+.default-label {
+    padding: 4px 10px 4px 0;
+}
+
+.label-samll {
+    display: inline-block;
+    min-width: 100px;
+    padding: 0 10px;
+    max-width: 120px;
+}
+
+input.input-small,
+.sapMLIBActionable .sapMText {
+    font-size: 13px;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.label-samll ~ .input-small,
+.no-padding .sapMInputBaseInner {
+    margin-right: 25px;
+    width: calc(100% - 140px);
+}
+
+.action-buttons-container {
+    /*border-bottom: 1px solid #dfe2e9;*/
+    display: flex;
+    padding: 10px 15px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+/* Page specific stayle: Ends */
+
+
+/* SAP customize styles */
+
+.sapMInputBaseInner::-webkit-input-placeholder {
+    font-size: 13px;
+    color: #a7a3a3;
+    font-style: normal;
+    font-family: inherit;
+}
+
+.sapMFocus .sapMInputBaseContentWrapper {
+    outline: none;
+    outline-offset: -2;
+    border-color: rgb(77, 144, 254);
+}
+
+.sapMInputBaseInner:not(.sapMInputBaseReadonlyWrapper):not(.sapMInputBaseContentWrapperState):focus {
+    border-color: rgb(77, 144, 254);
+}
+
+.sapMBtnInner .sapMBtnContent {
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.sapMInputBaseReadonly .sapMInputBaseContentWrapper {
+    background: none;
+}
+
+.sapMListTbl .sapMText,
+.sapMListTbl .sapMLabel,
+.sapMListTbl .sapMObjectIdentifierTitle .sapMText {
+    /*color: #7d88a9;*/
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.sapMColumnHeaderContent.sapMLabel,
+.sapMListTbl .sapMObjectIdentifierTitle .sapMText,
+.sapMColumnHeader .sapMColumnHeaderContent {
+    color: #7d88a9;
+}
+
+.sapMShellBrandingBar {
+    display: none;
+}
+
+.sapMListShowSeparatorsAll .sapMLIBShowSeparator:last-child>td,
+.sapMListShowSeparatorsAll .sapMListTblSubRow:last-child>td {
+    border-bottom: none;
+}
+
+.sapMLIBShowSeparator>td {
+    border-top: none;
+}
+
+
+/*.sapMLIBFocusable:focus {*/
+
+
+/*    outline: none;*/
+
+
+/*    outline-offset: none;*/
+
+
+/*    background: #ffffff;*/
+
+
+/*}*/
+
+.sapMBtn:hover>.sapMBtnHoverable {
+    /*background-image: none;*/
+    background-color: #ffffff;
+    border-color: #a7a3a3;
+}
+
+.sapMBtnInner .sapMBtnContent {
+    font-family: "Raleway", Helvetica, Arial, serif !important;
+    font-weight: 600;
+}
+
+.sapMListTbl .sapMText,
+.sapMListTbl .sapMLabel {
+    min-height: 15px;
+}
+
+.sapMLIBActive.sapMText {
+    color: #000000;
+}
+
+.sapMColumnHeader {
+    border-right: 1px solid #eff1f4;
+}
+
+.sapUiSizeCompact .sapMInputBaseContentWrapper {
+    height: 32px;
+}
+
+input[type="text"]:read-only {
+    background-color: #efefef;
+}
+
+:not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    color: #a7a3a3;
+    outline: 1px auto rgb(77, 144, 254);
+}
+
+.sapMListTblCell> .sapMText {
+    color: #4f5858;
+}
+
+.sapMBtnIconFirst {
+    border: none;
+    padding: 4px 10px;
+}
+
+.sapMBtnIcon {
+    line-height: 1;
+}
+
+.sapMListTblCell {
+    border-right: 1px solid #eff1f4;
+    border-bottom: 1px solid #eff1f4;
+}
+
+.sapMListTblCell.sapMListTblCellNoData,
+.sapMListTblCell:nth-last-child(2) {
+    border-right: none;
+}
+
+.sapMBtnInner:focus,
+.sapMBtnContent>span:focus {
+    outline: 1px auto rgb(77, 144, 254);
+}
+
+:not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive .sapMBtnIcon {
+    color: black;
+}
+
+.TP1,
+.TP2 {
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    height: 32px;
+}
+.TP1 .sapMInputBaseIcon, .TP2 .sapMInputBaseIcon {
+	line-height:34px;
+	left: -3px;
+}
+
+.sapMTimePicker {
+    width: 100%;
+}
+
+.sapMTimePicker input.sapMInputBaseInner {
+    color: #4f5858;
+    font-weight: 600;
+}
+
+
+/*.sapMInputBaseIcon {*/
+
+
+/*    line-height: normal;*/
+
+
+/*    display: flex;*/
+
+
+/*    align-items: center;*/
+
+
+/*    justify-content: space-around;*/
+
+
+/*}*/
+
+.sapMCbBg.sapMCbMarkChecked:before {
+    line-height: normal;
+    font-size: 14px;
+}
+
+.sapMCbBg {
+    border: 2px solid #dcdcdc;
+        height: 16px;
+    width: 16px;
+}
+
+.sapMCbLabel,
+.sapMITBFilter .sapMITBText {
+    color: #4f5858;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.sapMCb {
+    width: 100%;
+}
+
+.downLink .sapMBtnInner {
+    border: none;
+    font-size: 8px;
+    padding: 0px;
+    height: auto;
+    color: #7d88a9;
+}
+
+.sapMBtnBase.downLink {
+    position: absolute;
+    height: auto;
+    top: 40px;
+}
+
+.upload-container {
+    position: relative;
+}
+
+.sapUiFup:hover .sapMBtnHoverable {
+    background-color: #ffffff !important;
+}
+
+.sapMLIBActive .sapMText {
+    color: #000000 !important;
+}
+
+
+/*date picker style
+
+*/
+
+.date-picker {
+    position: relative;
+}
+
+.date-picker .calendar-icon {
+    background-size: 20px;
+    background-position: 8px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 38px;
+}
+
+.ui-datepicker-trigger {
+    background-size: 20px;
+    background-position: 8px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 10px !important;
+    height: 63% !important;
+    top: 4px !important;
+}
+
+
+/*.sapUiBody{*/
+
+
+/*	 height: auto !important;*/
+
+
+/*}*/
+
+
+/*#content {*/
+
+
+/*    height: auto !important;*/
+
+
+/*}*/
+
+
+/*.sapMBtn .sapMBtnIcon {*/
+
+
+/*    margin-top: -23%;*/
+
+
+/*    cursor: inherit;*/
+
+
+/*}*/
+
+.buttonClass {
+    width: 50px !important;
+}
+
+.sapMNav {
+    overflow: inherit;
+}
+
+.sapMRb .sapMRbB .sapMRbBOut {
+    stroke: #dcdcdc;
+}
+
+.sapMRbSvg {
+    height: 1.125rem;
+    width: 1.125rem;
+}
+
+.sapMRbG.sapMRbG1Row>.sapMRb {
+    padding: 5px 10px 5px 25px;
+    margin-right: 16px;
+}
+
+.sapMRb>.sapMLabel {
+    max-width: 100%;
+    color: #4f5858;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.sapMRbG .sapMRbB {
+    left: auto;
+}
+
+.sapMRbSel .sapMRbBInn {
+    fill: #000000;
+}
+
+.sapMITBFilter .sapMITBText {
+    width: 100%;
+}
+
+.sapMITBItem {
+    min-width: 120px;
+    color: #4f5858;
+}
+
+.sapMITBTab {
+    width: 100%;
+}
+
+
+/*.new-mar .sapMInputBaseInner{*/
+
+
+/*	width: calc(100% - 25px) !important;*/
+
+
+/*}*/
+
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMPanel.sapUiResponsiveContentPadding>.sapMPanelContent,
+.sapMPanel.sapUiResponsiveContentPadding>.sapMPanelContent {
+    padding: 0px;
+}
+
+@media (min-width: 1024px) {
+    .sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMITB.sapUiResponsiveContentPadding>.sapMITBContainerContent>.sapMITBContent,
+    .sapMITB.sapUiResponsiveContentPadding>.sapMITBContainerContent>.sapMITBContent {
+        /* padding: 1rem 2rem; */
+        padding: 0px;
+        box-sizing: border-box;
+    }
+}
+
+.col.no-padding.new-mar {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.sapMInputBaseHeightMargin {
+    margin: 0px;
+}
+
+.sapMInputBase {
+    height: auto;
+}
+
+.sapMITBSelected .sapUiIcon,
+.sapMITBSelected .sapMITBText {
+    color: #7d88a9 !important;
+    border-color: #7d88a9;
+}
+
+.sapMITBSelected {
+    border-bottom: 2px solid #7d88a9 !important;
+}
+
+@media (min-width: 1280px) {
+    html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
+        width: 100%;
+        margin-left: 0px;
+        left: 0;
+    }
+}
+
+.sapMPageSubHeader,
+.sapMPageHeader {
+    display: none;
+}
+
+.sapMPageEnableScrolling {
+    overflow: inherit;
+}
+
+.sapMPage>.sapMPageHeader + section,
+.sapMPage>.sapMPageSubHeader + section,
+.sapMPage>.sapMPageHeader + .sapUiHiddenPlaceholder + section {
+    top: 0px;
+}
+
+#idFieldEquipmentRequestLab-tblBody .sapMInputBaseIcon,
+.fieldwork-request-container .description-detail .sapMInputBaseIcon,
+#idEngineeringLab-tblBody .sapMInputBaseIcon,
+#idSeaLabTable_Chemicals-tblBody .sapMInputBaseIcon,
+#idSeaLabTable_Compresses-listUl .sapMInputBaseIcon #idSeaLabTable_Aquarium-listUl .sapMInputBaseIcon,
+#idSeaLabTable_EquipmentRequested .sapMInputBaseIcon,
+#idSeaLabTable_Compresses-listUl .sapMInputBaseIcon,
+#idSeaLabTable_others .sapMInputBaseIcon,
+#idSeaLabTable_Aquarium-before .sapMInputBaseIcon,
+#idSeaLabTable_Aquarium .sapMInputBaseIcon {
+    top: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    line-height: 2.375rem;
+}
+
+.sapMInputBaseIconPressed .sapMInputBaseIcon,
+html.sap-desktop .sapMInputBaseIconPressed .sapMInputBaseIcon:hover {
+    background: transparent;
+}
+
+.sapMInputBaseIconPressed .sapMInputBaseIcon::before {
+    color: #4f5858;
+}
+
+.sapMInputBaseIcon {
+    color: #4f5858;
+}
+
+.sapMInputBaseHasEndIcons .sapMInputBaseContentWrapper,
+.sapMInputBaseHasBeginIcons .sapMInputBaseContentWrapper {
+    min-width: auto;
+}
+
+.sapMITBFilterIcon {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    -moz-border-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 2.75rem;
+    line-height: 2.5rem;
+    overflow: hidden;
+    width: 2.75rem;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.sapMITBFilterIcon {
+    border: 1px solid #4f5858;
+    background-color: white;
+    z-index: 1;
+}
+
+.sapMLnk {
+    color: #237cd3;
+    margin: 0px 10px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#idTripSpecs .sapMITBFilterIcon,
+#idCMRAssitance .sapMITBFilterIcon,
+#idTripParticipantInfo .sapMITBFilterIcon,
+#idProjectSpecification .sapMITBFilterIcon,
+#idEquipmentRequested .sapMITBFilterIcon,
+#idResearchActivities .sapMITBFilterIcon {
+    border: none;
+}
+
+
+/*.sapMITBHead:before{*/
+
+
+/*	    top: 14px;*/
+
+
+/*    bottom: 0;*/
+
+
+/*    position: absolute;*/
+
+
+/*    content: " ";*/
+
+
+/*    width: 100%;*/
+
+
+/*    height: 1px;*/
+
+
+/*    background-color: #ccc;*/
+
+
+/*    z-order: 0;*/
+
+#idTripSpecs .sapMITBHorizontalWrapper,
+#idCMRAssitance .sapMITBHorizontalWrapper,
+#idProjectSpecification .sapMITBHorizontalWrapper,
+#idEquipmentRequested .sapMITBHorizontalWrapper,
+#idEngineeringControls .sapMITBHorizontalWrapper {
+    position: absolute;
+    background: #dcdcdc;
+    height: 5px;
+    left: 74px;
+    top: 20px;
+}
+
+#idProjectSpecification .sapMITBHorizontalWrapper,
+#idTripSpecs .sapMITBHorizontalWrapper {
+    width: 85px;
+}
+
+#idCMRAssitance .sapMITBHorizontalWrapper,
+#idEngineeringControls .sapMITBHorizontalWrapper,
+#idEquipmentRequested .sapMITBHorizontalWrapper {
+    width: 89px;
+}
+
+.addColor {
+    color: #7d88a9;
+}
+
+.addColor .sapMITBFilterIcon {
+    border: 2px solid #7d88a9 !important;
+}
+
+.addColor .sapMITBHorizontalWrapper {
+    background: #7d88a9 !important;
+}
+
+
+/*#idTripParticipantInfo .sapMITBDisabled + #idCMRAssitance .sapMITBHorizontalWrapper{*/
+
+
+/*	color:black;*/
+
+
+/*}*/
+
+.project-info-container .sapMITBContent {
+    min-height: calc(100vh - 370px);
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: flex-end;*/
+}
+
+
+/*.project-info-container .sapMITBContent .sapMText{*/
+
+
+/*    font-size: 21px;*/
+
+
+/*    font-family: "Raleway", Helvetica, Arial, serif !important;*/
+
+
+/*    color:#4f5858;*/
+
+
+/*}*/
+
+.labSelect {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    max-width: 366px;
+}
+
+.labSelect .sapMText {
+    font-size: 21px;
+    color: #4f5858;
+}
+
+.sapMInputBaseIconContainer {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+}
+
+.sapUiTableRowSelectors:not(.sapUiTableRowHighlights) .sapUiTableCtrlScr,
+.sapUiTableRowSelectors:not(.sapUiTableRowHighlights) .sapUiTableCtrlScrFixed,
+.sapUiTableCHA .sapUiTableCtrlScr {
+    margin-left: 0px !important;
+}
+
+.catTable div.treeTable-sapUiTableRowHdrScr,
+.sapUiTableRowSelectors:not(.sapUiTableRowHighlights) .sapUiTableRowHdrScr {
+    display: none;
+}
+
+.catTable .sapUiTableCnt {
+    border-left: 1px solid #dfe2e9 !important;
+    border-right: 1px solid #dfe2e9 !important;
+    border-top: 1px solid #dfe2e9 !important;
+}
+
+.catTable .sapUiTableCell {
+    box-sizing: border-box;
+    border-right: 1px solid #dfe2e9 !important;
+    border-bottom: 1px solid #dfe2e9 !important;
+}
+
+.catTable .sapUiTableCCnt {
+    border-bottom: none !important;
+}
+
+.catTable .sapUiTableCellDummy {
+    border-left: none !important;
+}
+
+.catTable tr.sapUiTableRow.sapUiTableHeaderRow.sapUiTableColHdrTr {
+    background-color: #f5faff;
+    border-bottom: 2px solid #dfe2e9;
+}
+
+.catTable .sapUiTableCell .sapMLabel {
+    color: #7d88a9;
+    font-size: 13px;
+    font-weight: 600;
+    height: 14px;
+    font-family: "Raleway", Helvetica, Arial, serif !important;
+}
+
+.catTable .sapUiTableCell .sapMText {
+    vertical-align: middle;
+    color: #4f5858;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Raleway", Helvetica, Arial, serif !important;
+}
+
+.catTable .sapUiTableVScr .sapUiTableCtrlScr {
+    border-right: none;
+}
+
+.catTable .sapUiTableColHdrCnt {
+    border-bottom: none;
+}
+
+.sapUiTableHeaderCell:not(.sapUiTableRowActionHeaderCell):hover {
+    background-color: #f5faff !important;
+}
+
+.sapUiTable:not(.sapUiTableDragDrop) .sapUiTableHeaderCellActive:active {
+    background-color: #f5faff !important;
+}
+
+.sapUiTableContentRow.sapUiTableRowHvr {
+    background-color: #ffffff !important;
+    color: #4f5858 !important;
+}
+
+.sapUiTableHeaderCellActive:active>.sapUiTableCellInner span,
+.sapUiTableHeaderCellActive:active>.sapUiTableCellInner label,
+.sapUiTableHeaderCellActive:active>.sapUiTableCellInner.sapUiTableColSorted::after,
+.sapUiTableHeaderCellActive:active>.sapUiTableCellInner.sapUiTableColFiltered::after {
+    color: #7d88a9 !important;
+}
+
+.tableData .sapMInputBaseIconContainer {
+    position: absolute;
+    top: -3px;
+    right: -8px;
+}
+
+.addPanel {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    z-index: 1;
+}
+
+html,
+body {
+    background: #ebebeb;
+    font-size: 10px;
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-width: 320px;
+    margin: 0px auto 0 auto;
+    width: 100%;
+    background: white;
+    border-radius: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.tree {
+    float: left;
+    min-width: 319px;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    max-width: 30%;
+    overflow: auto;
+    padding: 0px 0;
+}
+
+.default {
+    position: absolute;
+    font-size: 20px;
+    top: 20%;
+    left: 40%;
+    color: #4a6682;
+}
+
+#container-CoreLabs---labs--admin_fileUploader {
+    min-height: 50px;
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid silver;
+    width: 100%;
+        background: white;
+}
+#container-CoreLabs---labs--admin_fileUploader-fu_form {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+
+}
+
+.data {
+    margin-left: 320px;
+}
+
+.data textarea {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background: white;
+    display: block;
+    line-height: 18px;
+    resize: none;
+}
+
+.tree .file {
+    background-position: -106px -72px
+}
+
+.tree .file-pdf {
+    background-position: -32px 0
+}
+
+.tree .file-as {
+    background-position: -36px 0
+}
+
+.tree .file-c {
+    background-position: -72px -0px
+}
+
+.tree .file-iso {
+    background-position: -108px -0px
+}
+
+.tree .file-htm,
+.tree .file-html,
+.tree .file-xml,
+.tree .file-xsl {
+    background-position: -126px -0px
+}
+
+.tree .file-cf {
+    background-position: -162px -0px
+}
+
+.tree .file-cpp {
+    background-position: -216px -0px
+}
+
+.tree .file-cs {
+    background-position: -236px -0px
+}
+
+.tree .file-sql {
+    background-position: -272px -0px
+}
+
+.tree .file-xls,
+.tree .file-xlsx {
+    background-position: -362px -0px
+}
+
+.tree .file-h {
+    background-position: -488px -0px
+}
+
+.tree .file-crt,
+.tree .file-pem,
+.tree .file-cer {
+    background-position: -452px -18px
+}
+
+.tree .file-php {
+    background-position: -108px -18px
+}
+
+.tree .file-jpg,
+.tree .file-jpeg,
+.tree .file-png,
+.tree .file-gif,
+.tree .file-bmp {
+    background-position: -126px -18px
+}
+
+.tree .file-ppt,
+.tree .file-pptx {
+    background-position: -144px -18px
+}
+
+.tree .file-rb {
+    background-position: -180px -18px
+}
+
+.tree .file-text,
+.tree .file-txt,
+.tree .file-md,
+.tree .file-log,
+.tree .file-htaccess {
+    background-position: -254px -18px
+}
+
+.tree .file-doc,
+.tree .file-docx {
+    background-position: -362px -18px
+}
+
+.tree .file-zip,
+.tree .file-gz,
+.tree .file-tar,
+.tree .file-rar {
+    background-position: -416px -18px
+}
+
+.tree .file-js {
+    background-position: -434px -18px
+}
+
+.tree .file-css {
+    background-position: -144px -0px
+}
+
+.tree .file-fla {
+    background-position: -398px -0px
+}
+header.admin-header {
+      background-color: #f5faff;
+    border-bottom: 2px solid #dfe2e9;
+    min-height: 45px;
+    display: flex;
+    color:#7d88a9;
+    /* position: fixed; */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.upload .sapMBtnInner {
+	    background-color: #009de0;
+    border-color: #008bc7;
+    color: #ffffff;
+}
+.save .sapMBtnInner{
+	    background-color: #007833;
+    border-color: #005f28;
+    color: #ffffff;
+    min-width:100px;
+}
+.save .sapMBtn:hover>.sapMBtnHoverable {
+    /* background-image: none; */
+    background-color: #007833;
+     background:#007833;
+    border-color: #a7a3a3;
+}
+.upload .sapMBtn:hover>.sapMBtnHoverable {
+    /* background-image: none; */
+    background-color: #009de0 !important;
+    background:#009de0 !important;
+    border-color: #a7a3a3 !important;
+}

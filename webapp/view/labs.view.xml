@@ -1,0 +1,99 @@
+<mvc:View controllerName="PlantGrowth.CoreLabs.controller.labs" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page title="Request Form">
+					<content>
+						<html:div class="container" id="container" role="main">
+							<html:div class="tree" id="tree"></html:div>
+							<html:div class="data" id="data">
+								<html:div class="content code" style="display:none;">
+									<html:textarea id="code" readonly="readonly"></html:textarea>
+								</html:div>
+								<html:div class="content folder" style="display:none;"></html:div>
+								<html:div class="content image" style="display:none; position:relative;"><html:img src="" alt="" style="display:block; position:absolute; left:50%; top:50%; padding:0; max-height:90%; max-width:90%;"/></html:div>
+								<html:div class="content default" style="text-align:center;">Select a file from the tree.</html:div>
+							</html:div>
+						</html:div>
+						<html:div class="main-wrap">
+							<html:div class="container-wrapper">
+								<html:div class="row font-s14 margin-t10">
+									<html:div class="cols-10">Request Form</html:div>
+									<html:div class="cols-2">Date: 04/09/2019</html:div>
+								</html:div>
+								<html:div class="row font-s13 align-items-top">
+									<html:div class="cols-12 align-items-top">
+										<!--<HBox id="idLabList">-->
+										<html:label class="label-text">Service Area
+											<html:span class="mandatory-sign">*</html:span>
+										</html:label>
+										<html:div class="flex-wrap">
+											<!--CheckBoxes for Labs-->
+											<html:div class="main-items-chk" id="idLabList">
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idMarineSelect" text="Marine Operations" select="onSelectMarineLab"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idEngineeringSelect" text="Engineering" select="onSelectEngineeringLab"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idSeaLabSelect" text="Sea Labs" select="onSelectSeaLab"/></html:span>
+											</html:div>
+											<HBox id="idlistForMarine" visible="false">
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idFieldWorkSelect" text="Field Work Request" select="onSelectMarineLabSelect"/></html:span>
+												<html:span class="c-checkbox margin-r25"><CheckBox id="idFieldEquipmentSelect" text="Field Equipment Request" select="onSelectMarineLabSelect"/></html:span>
+											</HBox>
+										</html:div>
+									</html:div>
+								</html:div>
+								<html:div class="row font-s13 justify-content-center">
+									<html:div class="cols-12 font-s14 margin-t10">
+										Project Information
+									</html:div>
+									<html:div class="cols-11 no-padding">
+										<html:div class="row project-info-container">
+											<IconTabBar id="idIconTabBarMulti" class="sapUiResponsiveContentPadding" select="onSelectIcontabBar">
+												<items>
+													<IconTabFilter id="idMarineLabInfoLoad" icon="sap-icon://hint" key="marine" text="Marine Operations" enabled="false">
+														<!-- ############ Fragment loading for Marine Lab###########-->
+														<content>
+															<html:div class="labSelect">
+																<Text id="idDefaultText" text="Please select a lab."></Text>
+															</html:div>
+															<IconTabBar id="idmarineFieldRequestLab" class="sapUiResponsiveContentPadding" visible="false">
+																<items>
+																	<IconTabFilter id="idMarine_FieldRequest" text="Field work Request Form" enabled="false" key="FieldRequest">
+																		<content>
+																			<html:div class="labSelect">
+																				<Text id="idDefaultText1" text="Please select Field Work Request or Field Equipment Request."></Text>
+																			</html:div>
+																		</content>
+																	</IconTabFilter>
+																	<IconTabFilter id="idMarine_FieldEquipement" text="Field Equipment Request Form" key="Equipment" enabled="false"/>
+																</items>
+															</IconTabBar>
+														</content>
+													</IconTabFilter>
+													<IconTabFilter id="idEngineeringLabInfoLoad" icon="sap-icon://collaborate" key="Engineering" text="Engineering" enabled="false">
+														<!-- ############ Fragment loading ###########-->
+													</IconTabFilter>
+													<IconTabFilter id="idSeaLabLabInfoLoad" icon="sap-icon://lab" text="SeaLabs" key="sea" enabled="false">
+														<!-- ############ Fragment loading ###########-->
+													</IconTabFilter>
+												</items>
+											</IconTabBar>
+										</html:div>
+									</html:div>
+								</html:div>
+							</html:div>
+						</html:div>
+					</content>
+					<footer >
+						<Toolbar >
+							<ToolbarSpacer/>
+							<Button id="idPrev" text="Prev" type="Emphasized" visible="false" press="onPressPrev"/>
+							<Button id="idNext" text="Next" type="Emphasized" visible="false" press="onPressNext"/>
+							<Button id="idSubmit" text="Submit" type="Accept" visible="false" press="onPressSubmit"/>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
